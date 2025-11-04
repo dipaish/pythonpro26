@@ -168,7 +168,9 @@ article a:visited {
 .content .drac-btn,
 .btn,
 .drac-btn,
-.btn-preview {
+.btn-preview,
+a.btn,
+a.drac-btn {
     background-color: #0066cc !important;
     color: #ffffff !important;
     border: 2px solid #0066cc !important;
@@ -176,14 +178,17 @@ article a:visited {
     font-weight: 600 !important;
     text-decoration: none !important;
     border-radius: 6px !important;
-    transition: all 0.2s ease !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease !important;
+    display: inline-block !important;
 }
 
 .content .btn:hover,
 .content .drac-btn:hover,
 .btn:hover,
 .drac-btn:hover,
-.btn-preview:hover {
+.btn-preview:hover,
+a.btn:hover,
+a.drac-btn:hover {
     background-color: #0052a3 !important;
     border-color: #0052a3 !important;
     color: #ffffff !important;
@@ -195,11 +200,25 @@ article a:visited {
 .content .drac-btn:visited,
 .btn:visited,
 .drac-btn:visited,
-.btn-preview:visited {
+.btn-preview:visited,
+a.btn:visited,
+a.drac-btn:visited {
     color: #ffffff !important;
     background-color: #0066cc !important;
     border-color: #0066cc !important;
     text-decoration: none !important;
+}
+
+/* Active state */
+.content .btn:active,
+.content .drac-btn:active,
+.btn:active,
+.drac-btn:active,
+.btn-preview:active,
+a.btn:active,
+a.drac-btn:active {
+    background-color: #003d7a !important;
+    border-color: #003d7a !important;
 }
 
 /* Focus state for accessibility */
@@ -207,7 +226,9 @@ article a:visited {
 .content .drac-btn:focus,
 .btn:focus,
 .drac-btn:focus,
-.btn-preview:focus {
+.btn-preview:focus,
+a.btn:focus,
+a.drac-btn:focus {
     outline: 3px solid #ffa500 !important;
     outline-offset: 2px !important;
     box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3) !important;
@@ -238,6 +259,48 @@ article a:visited {
 .btn-preview i {
     color: #ffffff !important;
 }
+
+/* ===== NAVIGATION BUTTONS (Footer Previous/Next) ===== */
+/* Target footer navigation specifically */
+.md-footer-nav__link,
+.md-footer__link,
+footer a[rel="prev"],
+footer a[rel="next"] {
+    background-color: #0066cc !important;
+    color: #ffffff !important;
+    border: 2px solid #0066cc !important;
+    padding: 10px 20px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+}
+
+.md-footer-nav__link:hover,
+.md-footer__link:hover,
+footer a[rel="prev"]:hover,
+footer a[rel="next"]:hover {
+    background-color: #0052a3 !important;
+    border-color: #0052a3 !important;
+    color: #ffffff !important;
+}
+
+.md-footer-nav__link:visited,
+.md-footer__link:visited,
+footer a[rel="prev"]:visited,
+footer a[rel="next"]:visited {
+    color: #ffffff !important;
+    background-color: #0066cc !important;
+    border-color: #0066cc !important;
+}
+
+/* Ensure text and icons in navigation buttons are white */
+.md-footer-nav__link *,
+.md-footer__link *,
+footer a[rel="prev"] *,
+footer a[rel="next"] * {
+    color: #ffffff !important;
+}
+
 
 /* ===== BADGES/TAGS ===== */
 .content .badge {
