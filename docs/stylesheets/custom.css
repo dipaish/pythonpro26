@@ -166,6 +166,45 @@ article a:visited {
 /* ===== BUTTONS ===== */
 /* Remove button customizations - let Dracula theme handle buttons */
 
+/* ===== PREVIOUS/NEXT NAVIGATION BUTTONS ===== */
+/* Improve visibility of footer navigation buttons */
+.md-footer__inner,
+.md-footer-nav {
+    background-color: #1a1a1a !important;
+}
+
+.md-footer-nav__link {
+    background-color: #f8f8f2 !important;
+    color: #282a36 !important;
+    border: 2px solid #bd93f9 !important;
+    padding: 12px 20px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+}
+
+.md-footer-nav__link:hover {
+    background-color: #bd93f9 !important;
+    color: #f8f8f2 !important;
+    border-color: #bd93f9 !important;
+}
+
+.md-footer-nav__link:focus {
+    outline: 3px solid #ff79c6 !important;
+    outline-offset: 2px !important;
+}
+
+/* Ensure title text in navigation buttons is visible */
+.md-footer-nav__title,
+.md-footer-nav__direction {
+    color: inherit !important;
+}
+
+.md-footer-nav__link:hover .md-footer-nav__title,
+.md-footer-nav__link:hover .md-footer-nav__direction {
+    color: #f8f8f2 !important;
+}
+
 
 /* ===== BADGES/TAGS ===== */
 .content .badge {
