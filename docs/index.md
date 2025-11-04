@@ -140,7 +140,7 @@ cat ../../.progress/marksheet.md
 
 ## 📄 License & Attribution
 
-This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License** - see the [LICENSE](https://github.com/dipaish/pythonpro26/blob/main/LICENSE) file for details.
 
 ### Adaptations in This Repository
 

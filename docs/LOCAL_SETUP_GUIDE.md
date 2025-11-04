@@ -2,7 +2,7 @@
 
 This guide will walk you through setting up a complete local development environment for this Python course on **Windows**, **macOS**, or **Linux**.
 
-> **💡 Don't want to install anything?** Use [GitHub Codespaces](.devcontainer/README.md) instead! It's free, browser-based, and requires zero setup.
+> **💡 Don't want to install anything?** Use [GitHub Codespaces](https://github.com/dipaish/pythonpro26/tree/main/.devcontainer) instead! It's free, browser-based, and requires zero setup.
 
 ---
 
@@ -600,8 +600,8 @@ Let's make sure everything works!
 
 Now that your environment is set up:
 
-1. **Read the [Main README](README.md)** for course overview
-2. **Start with [Part 1](part1/README.md)**
+1. **Read the [Main README](https://github.com/dipaish/pythonpro26#readme)** for course overview
+2. **Start with [Part 1](part1.md)**
 3. **Run tasks:** `python task_name.py`
 4. **Check progress:** `python grade_part1.py`
 5. **Track scores:** Open `.progress/marksheet.md`
@@ -633,9 +633,9 @@ Now that your environment is set up:
 
 ## 🆘 Still Having Issues?
 
-- Check [GitHub Issues](https://github.com/YOUR_USERNAME/pythonpro26/issues)
+- Check [GitHub Issues](https://github.com/dipaish/pythonpro26/issues)
 - Ask your instructor
-- Or try [GitHub Codespaces](.devcontainer/README.md) - zero setup required!
+- Or try [GitHub Codespaces](https://github.com/dipaish/pythonpro26/tree/main/.devcontainer) - zero setup required!
 
 ---
 
