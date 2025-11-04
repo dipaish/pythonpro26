@@ -37,8 +37,26 @@ jobs:
           print('MkDocs', mkdocs.__version__)
           print('Dracula theme OK:', mkdocs_dracula_theme.__name__)
           PY
-      - name: Sync README to docs/index.md
-        run: cp README.md docs/index.md
+      - name: Sync README and fix links for MkDocs
+        run: |
+          # Copy README to docs/index.md
+          cp README.md docs/index.md
+          # Copy referenced files to docs/
+          cp LOCAL_SETUP_GUIDE.md docs/local-setup.md
+          cp LICENSE docs/license.md
+          mkdir -p docs/.devcontainer
+          cp .devcontainer/README.md docs/.devcontainer/README.md
+          # Fix links in docs/index.md for MkDocs
+          sed -i 's|\.devcontainer/README\.md|.devcontainer/README.md|g' docs/index.md
+          sed -i 's|LOCAL_SETUP_GUIDE\.md|local-setup.md|g' docs/index.md
+          sed -i 's|\[LICENSE\](LICENSE)|[LICENSE](license.md)|g' docs/index.md
+          # Remove anchor links that won't work (convert to plain text)
+          sed -i 's|\[Part 1\](#part-1-fundamentals-31-tasks)|Part 1|g' docs/index.md
+          sed -i 's|\[Part 2\](#part-2-conditionals--loops-22-tasks)|Part 2|g' docs/index.md
+          sed -i 's|\[Part 3\](#part-3-loops--functions-34-tasks)|Part 3|g' docs/index.md
+          sed -i 's|\[Part 4\](#part-4-functions--lists-37-tasks)|Part 4|g' docs/index.md
+          sed -i 's|\[Part 5\](#part-5-advanced-topics-25-tasks)|Part 5|g' docs/index.md
+          sed -i 's|\[Part 6\](#part-6-file-handling--errors-19-tasks)|Part 6|g' docs/index.md
       - name: Build site (strict)
         run: mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
