@@ -496,8 +496,8 @@ git push
 ## 🔗 Quick Links
 
 - **Next:** [Part 2 - Conditionals & Loops](part2.md)
-- **Main README:** [Course Overview](../README.md)
-- **Setup Guide:** [Local Development Setup](../LOCAL_SETUP_GUIDE.md)
+- **Main README:** [Course Overview](index.md)
+- **Setup Guide:** [Local Development Setup](setup.md)
 - **Progress:** Check `.progress/marksheet.md` in your workspace
 
 ---
