@@ -8,6 +8,19 @@ theme:
 extra_css:
   - stylesheets/custom.css
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/dipaish
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/kcdeepak112/
+      name: LinkedIn
+
+copyright: |
+  ©2024 Deepak KC. All rights reserved.<br>
+  Site last generated: Nov 04, 2025
+
 nav:
   - Home: index.md
   - Setup Guide: LOCAL_SETUP_GUIDE.md

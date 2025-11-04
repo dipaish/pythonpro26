@@ -165,15 +165,78 @@ article a:visited {
 
 /* ===== BUTTONS ===== */
 .content .btn,
-.content .drac-btn {
+.content .drac-btn,
+.btn,
+.drac-btn,
+.btn-preview {
     background-color: #0066cc !important;
     color: #ffffff !important;
-    border: none !important;
+    border: 2px solid #0066cc !important;
+    padding: 10px 20px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
 }
 
 .content .btn:hover,
-.content .drac-btn:hover {
+.content .drac-btn:hover,
+.btn:hover,
+.drac-btn:hover,
+.btn-preview:hover {
     background-color: #0052a3 !important;
+    border-color: #0052a3 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Visited state - keep same appearance */
+.content .btn:visited,
+.content .drac-btn:visited,
+.btn:visited,
+.drac-btn:visited,
+.btn-preview:visited {
+    color: #ffffff !important;
+    background-color: #0066cc !important;
+    border-color: #0066cc !important;
+    text-decoration: none !important;
+}
+
+/* Focus state for accessibility */
+.content .btn:focus,
+.content .drac-btn:focus,
+.btn:focus,
+.drac-btn:focus,
+.btn-preview:focus {
+    outline: 3px solid #ffa500 !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3) !important;
+}
+
+/* Disabled state */
+.content .btn.disabled,
+.content .drac-btn.disabled,
+.btn.disabled,
+.drac-btn.disabled,
+.btn-preview.disabled {
+    background-color: #cccccc !important;
+    border-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+}
+
+/* Previous/Next navigation buttons specific styling */
+.btn-preview.drac-btn {
+    min-width: 120px !important;
+    text-align: center !important;
+}
+
+/* Ensure icons in buttons are visible */
+.btn i,
+.drac-btn i,
+.btn-preview i {
+    color: #ffffff !important;
 }
 
 /* ===== BADGES/TAGS ===== */
@@ -199,18 +262,49 @@ header input[type="text"]:focus,
     outline: none;
 }
 
-/* ===== FOOTER - Black background ===== */
+/* ===== FOOTER - Linux terminal style ===== */
 footer {
-    background-color: #1a1a1a !important;
-    color: #e0e0e0 !important;
+    background-color: #0c0c0c !important;
+    color: #00ff00 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    padding: 20px !important;
+    border-top: 2px solid #00ff00 !important;
+}
+
+footer * {
+    color: #00ff00 !important;
 }
 
 footer a {
-    color: #6eb5ff !important;
+    color: #00ff00 !important;
+    text-decoration: underline !important;
 }
 
 footer a:hover {
-    color: #8dc7ff !important;
+    color: #00cc00 !important;
+    background-color: #1a1a1a !important;
+}
+
+footer a:visited {
+    color: #00ff00 !important;
+}
+
+/* Footer copyright text */
+footer .drac-text-black,
+footer p,
+footer div {
+    color: #00ff00 !important;
+}
+
+/* Social media icons in footer */
+footer .fa,
+footer i {
+    color: #00ff00 !important;
+}
+
+/* Remove Dracula footer background override */
+.drac-bg-cyan-green {
+    background-color: #0c0c0c !important;
 }
 
 /* ===== DIVIDERS ===== */
