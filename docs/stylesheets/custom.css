@@ -1,132 +1,210 @@
-/* Accessibility improvements for Dracula theme */
-/* Enhanced readability with blue/white colors and better contrast */
+/* Professional black/white theme with high readability */
+/* Black sidebar and top bar, white content area */
 
-/* Primary text - higher contrast white for better readability */
-body {
-    color: #f0f0f0 !important;
+/* ===== SIDEBAR - Black background ===== */
+#sidebar,
+nav#sidebar,
+.sidebar,
+.drac-bg-black {
+    background-color: #1a1a1a !important;
 }
 
-/* Improved link colors - bright accessible blue */
-a,
-.drac-anchor {
-    color: #6eb5ff !important;
-    text-decoration: underline;
+/* Sidebar text and links - white/light gray */
+#sidebar a,
+#sidebar .drac-text,
+#sidebar .drac-anchor,
+.sidebar a {
+    color: #e0e0e0 !important;
+    text-decoration: none;
 }
 
-a:hover,
-.drac-anchor:hover {
-    color: #8dc7ff !important;
-    text-decoration: underline;
-}
-
-/* Visited links - distinct purple for better UX */
-a:visited {
-    color: #bd93f9 !important;
-}
-
-/* Headings - bright white for maximum contrast */
-h1, h2, h3, h4, h5, h6 {
+#sidebar a:hover,
+.sidebar a:hover {
     color: #ffffff !important;
+    background-color: #2a2a2a !important;
+}
+
+/* Active sidebar link */
+#sidebar a.active,
+.sidebar a.active {
+    color: #ffffff !important;
+    background-color: #333333 !important;
     font-weight: 600;
 }
 
-/* Code blocks - high contrast */
-code {
-    background-color: #282a36 !important;
-    color: #f8f8f2 !important;
-    border: 1px solid #44475a;
+/* Sidebar title/logo */
+#sidebar .drac-text-white,
+.sidebar .drac-text-white {
+    color: #ffffff !important;
+}
+
+/* ===== TOP NAVIGATION BAR - Black background ===== */
+header,
+.navbar,
+nav.navbar,
+.drac-bg-purple {
+    background-color: #1a1a1a !important;
+}
+
+header a,
+.navbar a {
+    color: #e0e0e0 !important;
+}
+
+header a:hover,
+.navbar a:hover {
+    color: #ffffff !important;
+}
+
+/* ===== MAIN CONTENT AREA - White background ===== */
+.content,
+.section-content,
+main .content,
+article {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+}
+
+/* Body base - ensure white content background */
+body {
+    background-color: #f5f5f5 !important;
+}
+
+/* Content text - dark for readability on white */
+.content,
+.content p,
+.content li,
+.content td,
+.section-content {
+    color: #1a1a1a !important;
+}
+
+/* ===== HEADINGS - Dark on white ===== */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+/* ===== LINKS - Blue for readability ===== */
+.content a,
+article a {
+    color: #0066cc !important;
+    text-decoration: underline;
+}
+
+.content a:hover,
+article a:hover {
+    color: #0052a3 !important;
+}
+
+.content a:visited,
+article a:visited {
+    color: #551a8b !important;
+}
+
+/* ===== CODE BLOCKS - Light gray background ===== */
+.content code {
+    background-color: #f4f4f4 !important;
+    color: #d73a49 !important;
+    border: 1px solid #e0e0e0;
     padding: 2px 6px;
     border-radius: 3px;
 }
 
-pre code {
-    background-color: #282a36 !important;
-    color: #f8f8f2 !important;
+.content pre {
+    background-color: #f6f8fa !important;
+    border: 1px solid #e0e0e0 !important;
+    padding: 16px;
+    border-radius: 6px;
 }
 
-/* Table improvements */
-table {
-    border: 1px solid #6272a4;
+.content pre code {
+    background-color: transparent !important;
+    color: #24292e !important;
+    border: none;
 }
 
-th {
-    background-color: #44475a !important;
-    color: #ffffff !important;
+/* ===== TABLES ===== */
+.content table {
+    border-collapse: collapse;
+    border: 1px solid #d0d0d0;
+    background-color: #ffffff !important;
+}
+
+.content th {
+    background-color: #f0f0f0 !important;
+    color: #1a1a1a !important;
     font-weight: 600;
+    border: 1px solid #d0d0d0;
+    padding: 8px 12px;
 }
 
-td {
-    border: 1px solid #6272a4;
-    color: #f0f0f0 !important;
+.content td {
+    border: 1px solid #d0d0d0;
+    color: #1a1a1a !important;
+    padding: 8px 12px;
 }
 
-/* Navigation links - bright blue */
-nav a,
-.sidebar a,
-.navbar a {
-    color: #6eb5ff !important;
+.content tr:nth-child(even) {
+    background-color: #f9f9f9 !important;
 }
 
-nav a:hover,
-.sidebar a:hover,
-.navbar a:hover {
-    color: #8dc7ff !important;
-}
-
-/* Active navigation items */
-nav a.active,
-.sidebar a.active {
-    color: #ffffff !important;
-    font-weight: 600;
-}
-
-/* Button improvements */
-.btn,
-.drac-btn {
-    border: 2px solid #6eb5ff !important;
-    color: #ffffff !important;
-}
-
-.btn:hover,
-.drac-btn:hover {
-    background-color: #6eb5ff !important;
-    color: #282a36 !important;
-}
-
-/* Blockquote styling */
-blockquote {
-    border-left: 4px solid #6eb5ff !important;
-    color: #f0f0f0 !important;
-    padding-left: 1rem;
+/* ===== BLOCKQUOTES ===== */
+.content blockquote {
+    border-left: 4px solid #0066cc !important;
+    background-color: #f0f7ff !important;
+    color: #1a1a1a !important;
+    padding: 12px 16px;
     margin-left: 0;
 }
 
-/* Badge/inline code improvements */
-.badge {
-    background-color: #6272a4 !important;
+/* ===== BUTTONS ===== */
+.content .btn,
+.content .drac-btn {
+    background-color: #0066cc !important;
     color: #ffffff !important;
+    border: none !important;
 }
 
-/* Search box */
-input[type="text"],
-.search-box input {
-    color: #f0f0f0 !important;
-    background-color: #282a36 !important;
-    border: 1px solid #6272a4 !important;
+.content .btn:hover,
+.content .drac-btn:hover {
+    background-color: #0052a3 !important;
 }
 
-input[type="text"]:focus,
-.search-box input:focus {
-    border-color: #6eb5ff !important;
+/* ===== BADGES/TAGS ===== */
+.content .badge {
+    background-color: #e0e0e0 !important;
+    color: #1a1a1a !important;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+/* ===== SEARCH BOX - In black header ===== */
+header input[type="text"],
+.navbar input[type="text"],
+.drac-input-search {
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444444 !important;
+}
+
+header input[type="text"]:focus,
+.navbar input[type="text"]:focus {
+    border-color: #0066cc !important;
     outline: none;
 }
 
-/* Ensure list items are readable */
-li {
-    color: #f0f0f0 !important;
+/* ===== FOOTER - Black background ===== */
+footer {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
 }
 
-/* Footer links */
 footer a {
     color: #6eb5ff !important;
 }
@@ -135,17 +213,50 @@ footer a:hover {
     color: #8dc7ff !important;
 }
 
-/* Improve contrast for disabled elements */
-.disabled,
-[disabled] {
-    opacity: 0.5;
-    color: #6272a4 !important;
+/* ===== DIVIDERS ===== */
+.content hr {
+    border: 0;
+    border-top: 1px solid #d0d0d0;
 }
 
-/* Focus indicators for accessibility */
-a:focus,
-button:focus,
-input:focus {
-    outline: 2px solid #6eb5ff;
+/* ===== HIDE PERMALINK PILCROW ===== */
+.headerlink {
+    display: none !important;
+}
+
+/* Make entire heading clickable */
+.content h1:hover,
+.content h2:hover,
+.content h3:hover,
+.content h4:hover,
+.content h5:hover,
+.content h6:hover {
+    cursor: pointer;
+}
+
+/* ===== FOCUS INDICATORS ===== */
+.content a:focus,
+.content button:focus,
+.content input:focus {
+    outline: 2px solid #0066cc;
     outline-offset: 2px;
+}
+
+/* ===== LIST STYLING ===== */
+.content ul,
+.content ol {
+    color: #1a1a1a !important;
+}
+
+.content li {
+    color: #1a1a1a !important;
+}
+
+/* ===== ENSURE PROPER CONTRAST ===== */
+.drac-bg-black-secondary {
+    background-color: #1a1a1a !important;
+}
+
+.drac-text-grey-ternary {
+    color: #e0e0e0 !important;
 }
