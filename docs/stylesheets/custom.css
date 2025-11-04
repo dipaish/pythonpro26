@@ -230,78 +230,114 @@ header input[type="text"]:focus,
 }
 
 /* ===== FOOTER - Linux terminal style ===== */
-footer {
+/* Force black terminal background on all footer elements */
+footer,
+.md-footer,
+.drac-footer,
+footer .container,
+footer .row,
+footer .col {
     background-color: #0c0c0c !important;
     color: #00ff00 !important;
     font-family: 'Courier New', Courier, monospace !important;
-    padding: 20px !important;
     border-top: 2px solid #00ff00 !important;
 }
 
-footer * {
+/* Make all footer text green */
+footer *,
+.md-footer *,
+.drac-footer * {
     color: #00ff00 !important;
 }
 
-footer a {
+footer a,
+.md-footer a,
+.drac-footer a {
     color: #00ff00 !important;
     text-decoration: underline !important;
 }
 
-footer a:hover {
+footer a:hover,
+.md-footer a:hover,
+.drac-footer a:hover {
     color: #00cc00 !important;
     background-color: #1a1a1a !important;
 }
 
-footer a:visited {
+footer a:visited,
+.md-footer a:visited,
+.drac-footer a:visited {
     color: #00ff00 !important;
 }
 
-/* Footer copyright text */
-footer .drac-text-black,
-footer p,
-footer div {
-    color: #00ff00 !important;
-}
-
-/* Social media icons in footer */
-footer .fa,
-footer i {
-    color: #00ff00 !important;
-}
-
-/* Remove Dracula footer background override */
-.drac-bg-cyan-green {
+/* Remove Dracula footer background classes */
+.drac-bg-cyan-green,
+.drac-bg-purple-transparent,
+footer .drac-bg-black,
+footer .drac-bg-black-secondary {
     background-color: #0c0c0c !important;
 }
 
-/* Hide default footer content and add custom content */
-/* Hide "Made with Material/Dracula" text */
+/* Hide default Dracula/Material footer text completely */
 footer .md-footer-copyright,
 footer .md-footer-copyright__highlight,
-footer .md-footer-meta__inner {
+footer .md-footer-meta__inner,
+footer .drac-text-black,
+footer small,
+footer .made-with {
+    visibility: hidden !important;
+    display: none !important;
+    height: 0 !important;
     font-size: 0 !important;
+    line-height: 0 !important;
 }
 
-/* Add custom footer content using CSS pseudo-elements */
-footer .md-footer-meta::before {
-    content: "©2024 Deepak KC. All rights reserved. | Site last generated: Nov 04, 2025";
+/* Create custom footer content area */
+footer::after {
+    content: "";
     display: block;
     text-align: center;
+    padding: 20px;
+    background-color: #0c0c0c !important;
+}
+
+/* Try multiple selectors to inject custom content */
+footer .md-footer-meta::before,
+footer .container::before,
+.drac-footer::before {
+    content: "©2024 Deepak KC. All rights reserved. | Site last generated: Nov 04, 2025" !important;
+    display: block !important;
+    text-align: center !important;
     color: #00ff00 !important;
     font-family: 'Courier New', Courier, monospace !important;
     font-size: 14px !important;
-    margin: 15px 0 10px 0;
+    margin: 15px 0 10px 0 !important;
+    visibility: visible !important;
 }
 
-footer .md-footer-meta::after {
-    content: "GitHub: https://github.com/dipaish | LinkedIn: https://www.linkedin.com/in/kcdeepak112/ | user@pythonpro26:~$ █";
-    display: block;
-    text-align: center;
+footer .md-footer-meta::after,
+footer .container::after,
+.drac-footer::after {
+    content: "GitHub: https://github.com/dipaish | LinkedIn: https://www.linkedin.com/in/kcdeepak112/" !important;
+    display: block !important;
+    text-align: center !important;
     color: #00ff00 !important;
     font-family: 'Courier New', Courier, monospace !important;
     font-size: 12px !important;
-    margin-top: 10px;
-    white-space: pre-line;
+    margin: 10px 0 !important;
+    visibility: visible !important;
+}
+
+/* Terminal prompt at the very bottom */
+footer::before {
+    content: "user@pythonpro26:~$ █" !important;
+    display: block !important;
+    text-align: center !important;
+    color: #00ff00 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 12px !important;
+    margin-top: 15px !important;
+    order: 999 !important;
 }
 
 /* ===== DIVIDERS ===== */
