@@ -301,16 +301,31 @@ footer .drac-bg-black-secondary {
 
 /* Hide default Dracula/Material footer text completely */
 footer .made-with,
-footer small:not(.md-footer-copyright *) {
+footer small:not(.md-footer-copyright *),
+footer .drac-text-black:not(.md-footer-copyright *),
+footer p:not(.md-footer-copyright *),
+footer span:not(.md-footer-copyright *):not(.md-footer-copyright span) {
     visibility: hidden !important;
     display: none !important;
     height: 0 !important;
+    width: 0 !important;
     font-size: 0 !important;
     line-height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+}
+
+/* Target Dracula theme specific "Made with" text */
+footer .container > p,
+footer .container > small,
+footer .row > div > p,
+footer .col > p {
+    display: none !important;
 }
 
 /* Show and style the copyright section from mkdocs.yml */
 footer .md-footer-copyright,
+footer .md-footer-copyright *,
 footer .md-footer-copyright__highlight {
     visibility: visible !important;
     display: block !important;
@@ -321,6 +336,9 @@ footer .md-footer-copyright__highlight {
     background-color: transparent !important;
     padding: 15px 0 !important;
     line-height: 1.8 !important;
+    height: auto !important;
+    width: auto !important;
+    position: relative !important;
 }
 
 /* Style links in copyright section */
