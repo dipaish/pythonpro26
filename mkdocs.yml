@@ -21,6 +21,16 @@ extra:
       link: https://www.linkedin.com/in/kcdeepak112/
       name: LinkedIn
 
+copyright: |
+  <div style="text-align: center; font-family: 'Courier New', Courier, monospace; color: #00ff00;">
+    <p>©2024 Deepak KC. All rights reserved. | Site last generated: Nov 04, 2025</p>
+    <p>
+      <a href="https://github.com/dipaish" target="_blank" style="color: #00ff00; text-decoration: underline;">GitHub</a> | 
+      <a href="https://www.linkedin.com/in/kcdeepak112/" target="_blank" style="color: #00ff00; text-decoration: underline;">LinkedIn</a>
+    </p>
+    <p style="font-size: 12px;">user@pythonpro26:~$ █</p>
+  </div>
+
 nav:
   - Home: index.md
   - Setup Guide: LOCAL_SETUP_GUIDE.md
