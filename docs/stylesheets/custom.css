@@ -390,33 +390,59 @@ footer *,
 .md-footer,
 .md-footer * {
     visibility: visible !important;
-    display: revert !important;
 }
 
+/* Hide the default "Made with Dracula" text completely */
 footer .md-footer-copyright,
-footer .md-footer-copyright *,
-footer .md-footer-copyright__highlight,
-footer .md-footer-copyright p,
-footer .md-footer-copyright a {
-    visibility: visible !important;
+footer .md-footer-copyright__highlight {
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+
+/* Hide any text nodes but show our custom elements */
+footer .md-footer-copyright > * {
+    font-size: 0 !important;
+}
+
+/* Inject custom content using CSS */
+footer .md-footer-copyright::before {
+    content: "©2024 Deepak KC. All rights reserved. | Site last generated: Nov 04, 2025" !important;
     display: block !important;
     color: #00ff00 !important;
     font-family: 'Courier New', Courier, monospace !important;
     font-size: 14px !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    margin: 8px 0 !important;
 }
 
-footer .md-footer-copyright p {
+footer .md-footer-copyright::after {
+    content: "GitHub: github.com/dipaish | LinkedIn: linkedin.com/in/kcdeepak112/ \A user@pythonpro26:~$ █" !important;
     display: block !important;
+    color: #00ff00 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 12px !important;
+    line-height: 1.8 !important;
+    text-align: center !important;
+    white-space: pre-line !important;
+    margin: 8px 0 !important;
 }
 
-/* Style links in copyright section */
-footer .md-footer-copyright a {
+/* Style links in copyright section if template works */
+footer p,
+footer p * {
+    visibility: visible !important;
+    font-size: 14px !important;
+}
+
+footer a {
     color: #00ff00 !important;
     text-decoration: underline !important;
     display: inline !important;
+    font-size: 14px !important;
 }
 
-footer .md-footer-copyright a:hover {
+footer a:hover {
     color: #00cc00 !important;
     background-color: #1a1a1a !important;
 }
