@@ -1,35 +1,19 @@
-# Learn Python by Doing# Python Programming Course - Complete Task List
+# Python Programming Course - Complete Task List
 
-
-
-Welcome to **PythonPro26** — 168 auto-graded exercises across 6 parts.[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-
-> No install needed. Use Codespaces to start instantly.
 
 ***A comprehensive auto-graded Python programming tasks repo with **168 exercises** across 6 parts.***
 
-- 🧑‍💻 Start with **Part 1** → [open the tasks on GitHub](https://github.com/dipaish/pythonpro26/tree/main/part1/part1Exercises/tasks/)
-
-- 🚀 Prefer a web IDE? Use Codespaces from your fork (see below for setup).  This repository contains the aligned, auto-graded exercises for the course [Fundamentals of Programming - Python](https://dipaish.github.io/programming-24/) which is adapted from the University of Helsinki's [Introduction to Programming (Programming MOOC)](https://programming-24.mooc.fi/) course.
-
-- 📊 Progress is tracked in `.progress/marksheet.md`.
+This repository contains the aligned, auto-graded exercises for the course [Fundamentals of Programming - Python](https://dipaish.github.io/programming-24/) which is adapted from the University of Helsinki's [Introduction to Programming (Programming MOOC)](https://programming-24.mooc.fi/) course.
 
 > 🚀 **No installation required!** Use GitHub Codespaces to start coding in your browser instantly.
 
----
-
 ## 📊 Tasks Overview
 
-<!-- NOTE: This file is auto-generated from README.md during CI build -->
-
-<!-- Edit README.md instead; changes here will be overwritten -->| Part | Topics | Tasks | Learning Materials |
-
+| Part | Topics | Tasks | Learning Materials |
 |------|--------|-------|-------|
-
-For the complete course overview, see [README.md](https://github.com/dipaish/pythonpro26#readme) on GitHub.| [Part 1](part1.md) | Fundamentals | 31 | [Part 1](https://dipaish.github.io/programming-24/part-1) |
-
+| [Part 1](part1.md) | Fundamentals | 31 | [Part 1](https://dipaish.github.io/programming-24/part-1) |
 | [Part 2](part2.md) | Conditionals & Loops | 22 | [Part 2](https://dipaish.github.io/programming-24/part-2)  |
 | [Part 3](part3.md) | Loops & Functions | 34 | [Part 3](https://dipaish.github.io/programming-24/part-3)  |
 | [Part 4](part4.md) | Functions & Lists | 37 | [Part 4](https://dipaish.github.io/programming-24/part-4)  |
