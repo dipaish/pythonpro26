@@ -1,0 +1,23 @@
+site_name: PythonPro26
+site_description: 168 auto-graded Python exercises with instant feedback
+site_url: https://dipaish.github.io/pythonpro26/
+repo_url: https://github.com/dipaish/pythonpro26
+theme:
+  name: dracula
+
+nav:
+  - Home: index.md
+  - Parts:
+      - Part 1 (Fundamentals): part1.md
+      - Part 2 (Conditionals & Loops): part2.md
+      - Part 3 (Loops & Functions): part3.md
+      - Part 4 (Functions & Lists): part4.md
+      - Part 5 (Advanced / optional): part5.md
+      - Part 6 (Files & Errors): part6.md
+  - For teachers: teacher.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
