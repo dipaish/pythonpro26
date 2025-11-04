@@ -5,6 +5,9 @@ repo_url: https://github.com/dipaish/pythonpro26
 theme:
   name: dracula
 
+extra_css:
+  - stylesheets/custom.css
+
 nav:
   - Home: index.md
   - Parts:

@@ -1,0 +1,151 @@
+/* Accessibility improvements for Dracula theme */
+/* Enhanced readability with blue/white colors and better contrast */
+
+/* Primary text - higher contrast white for better readability */
+body {
+    color: #f0f0f0 !important;
+}
+
+/* Improved link colors - bright accessible blue */
+a,
+.drac-anchor {
+    color: #6eb5ff !important;
+    text-decoration: underline;
+}
+
+a:hover,
+.drac-anchor:hover {
+    color: #8dc7ff !important;
+    text-decoration: underline;
+}
+
+/* Visited links - distinct purple for better UX */
+a:visited {
+    color: #bd93f9 !important;
+}
+
+/* Headings - bright white for maximum contrast */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* Code blocks - high contrast */
+code {
+    background-color: #282a36 !important;
+    color: #f8f8f2 !important;
+    border: 1px solid #44475a;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+pre code {
+    background-color: #282a36 !important;
+    color: #f8f8f2 !important;
+}
+
+/* Table improvements */
+table {
+    border: 1px solid #6272a4;
+}
+
+th {
+    background-color: #44475a !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+td {
+    border: 1px solid #6272a4;
+    color: #f0f0f0 !important;
+}
+
+/* Navigation links - bright blue */
+nav a,
+.sidebar a,
+.navbar a {
+    color: #6eb5ff !important;
+}
+
+nav a:hover,
+.sidebar a:hover,
+.navbar a:hover {
+    color: #8dc7ff !important;
+}
+
+/* Active navigation items */
+nav a.active,
+.sidebar a.active {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* Button improvements */
+.btn,
+.drac-btn {
+    border: 2px solid #6eb5ff !important;
+    color: #ffffff !important;
+}
+
+.btn:hover,
+.drac-btn:hover {
+    background-color: #6eb5ff !important;
+    color: #282a36 !important;
+}
+
+/* Blockquote styling */
+blockquote {
+    border-left: 4px solid #6eb5ff !important;
+    color: #f0f0f0 !important;
+    padding-left: 1rem;
+    margin-left: 0;
+}
+
+/* Badge/inline code improvements */
+.badge {
+    background-color: #6272a4 !important;
+    color: #ffffff !important;
+}
+
+/* Search box */
+input[type="text"],
+.search-box input {
+    color: #f0f0f0 !important;
+    background-color: #282a36 !important;
+    border: 1px solid #6272a4 !important;
+}
+
+input[type="text"]:focus,
+.search-box input:focus {
+    border-color: #6eb5ff !important;
+    outline: none;
+}
+
+/* Ensure list items are readable */
+li {
+    color: #f0f0f0 !important;
+}
+
+/* Footer links */
+footer a {
+    color: #6eb5ff !important;
+}
+
+footer a:hover {
+    color: #8dc7ff !important;
+}
+
+/* Improve contrast for disabled elements */
+.disabled,
+[disabled] {
+    opacity: 0.5;
+    color: #6272a4 !important;
+}
+
+/* Focus indicators for accessibility */
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid #6eb5ff;
+    outline-offset: 2px;
+}
