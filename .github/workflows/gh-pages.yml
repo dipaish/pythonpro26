@@ -37,6 +37,8 @@ jobs:
           print('MkDocs', mkdocs.__version__)
           print('Dracula theme OK:', mkdocs_dracula_theme.__name__)
           PY
+      - name: Sync README to docs/index.md
+        run: cp README.md docs/index.md
       - name: Build site (strict)
         run: mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
