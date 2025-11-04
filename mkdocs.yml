@@ -9,6 +9,9 @@ theme:
 extra_css:
   - stylesheets/custom.css
 
+extra_javascript:
+  - javascripts/copy-code.js
+
 extra:
   social:
     - icon: fontawesome/brands/github
