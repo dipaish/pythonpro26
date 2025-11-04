@@ -4,6 +4,7 @@ site_url: https://dipaish.github.io/pythonpro26/
 repo_url: https://github.com/dipaish/pythonpro26
 theme:
   name: dracula
+  custom_dir: docs/overrides
 
 extra_css:
   - stylesheets/custom.css
@@ -16,12 +17,6 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/kcdeepak112/
       name: LinkedIn
-
-copyright: |
-  ©2024 Deepak KC. All rights reserved. | Site last generated: Nov 04, 2025<br>
-  <a href="https://github.com/dipaish" target="_blank">GitHub</a> | 
-  <a href="https://www.linkedin.com/in/kcdeepak112/" target="_blank">LinkedIn</a><br>
-  <span style="font-family: monospace;">user@pythonpro26:~$ █</span>
 
 nav:
   - Home: index.md
