@@ -1,51 +1,48 @@
-name: Deploy MkDocs (Dracula)
+name: Build MkDocs to site (Dracula)
 
 on:
   push:
     branches:
       - mkdocsTesting
-  pull_request:
-    branches:
-      - mkdocsTesting
+    # Avoid rebuild loops by ignoring changes that only touch the generated site/
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - '.github/workflows/gh-pages.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  contents: write
 
 jobs:
-  build:
+  build-and-commit-site:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install MkDocs and theme
+      - name: Install MkDocs and Dracula theme
         run: |
           python -m pip install --upgrade pip
           pip install -r docs/requirements.txt
-          python -c "import mkdocs, mkdocs_dracula_theme, sys; print('MkDocs', mkdocs.__version__); print('Dracula theme OK:', mkdocs_dracula_theme.__name__)"
+          python - << 'PY'
+          import mkdocs, mkdocs_dracula_theme
+          print('MkDocs', mkdocs.__version__)
+          print('Dracula theme OK:', mkdocs_dracula_theme.__name__)
+          PY
       - name: Build site (strict)
         run: mkdocs build --strict
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    # Only deploy when pushing to mkdocsTesting (publish branch)
-    if: github.event_name == 'push' && github.ref == 'refs/heads/mkdocsTesting'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit and push updated site/
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A site
+          if git diff --cached --quiet; then
+            echo "No changes in site/ to commit"
+          else
+            git commit -m "Docs: rebuild site [skip ci]"
+            git push
+          fi
