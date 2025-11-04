@@ -1,4 +1,12 @@
-# Python
+# MkDocs build output (published by GitHub Pages Actions)
+site/
+
+# Python virtual environments
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc# Python
 __pycache__/
 *.py[cod]
 *$py.class
