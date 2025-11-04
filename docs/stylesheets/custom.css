@@ -211,14 +211,14 @@ article a:visited {
 /* Remove button customizations - let Dracula theme handle buttons */
 
 /* ===== PREVIOUS/NEXT NAVIGATION BUTTONS ===== */
-/* Terminal-style footer navigation buttons */
+/* Terminal-style footer navigation buttons - always bright */
 .md-footer__inner,
 .md-footer-nav {
     background-color: #0c0c0c !important;
 }
 
 .md-footer-nav__link {
-    background-color: #0c0c0c !important;
+    background-color: #1a1a1a !important;
     color: #00ff00 !important;
     border: 2px solid #00ff00 !important;
     padding: 12px 20px !important;
@@ -226,27 +226,31 @@ article a:visited {
     font-family: 'Courier New', Courier, monospace !important;
     border-radius: 6px !important;
     transition: all 0.2s ease !important;
-    box-shadow: 0 2px 8px rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5) !important;
 }
 
 .md-footer-nav__link:hover {
-    background-color: #1a1a1a !important;
+    background-color: #2a2a2a !important;
     color: #00ff00 !important;
     border-color: #00ff00 !important;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7) !important;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.7) !important;
 }
 
 .md-footer-nav__link:visited {
-    background-color: #0c0c0c !important;
+    background-color: #1a1a1a !important;
     color: #00ff00 !important;
     border-color: #00ff00 !important;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5) !important;
 }
 
 .md-footer-nav__link:visited:hover {
-    background-color: #1a1a1a !important;
+    background-color: #2a2a2a !important;
     color: #00ff00 !important;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7) !important;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.7) !important;
 }
 
 .md-footer-nav__link:focus {
@@ -254,28 +258,30 @@ article a:visited {
     outline-offset: 2px !important;
 }
 
-/* Ensure title text in navigation buttons is visible */
+/* Ensure title text in navigation buttons is visible with glow */
 .md-footer-nav__title,
 .md-footer-nav__direction {
     color: #00ff00 !important;
     font-family: 'Courier New', Courier, monospace !important;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5) !important;
 }
 
 .md-footer-nav__link:hover .md-footer-nav__title,
 .md-footer-nav__link:hover .md-footer-nav__direction {
     color: #00ff00 !important;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.7) !important;
 }
 
 .md-footer-nav__link:visited .md-footer-nav__title,
 .md-footer-nav__link:visited .md-footer-nav__direction {
     color: #00ff00 !important;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5) !important;
 }
 
 .md-footer-nav__link:visited:hover .md-footer-nav__title,
 .md-footer-nav__link:visited:hover .md-footer-nav__direction {
     color: #00ff00 !important;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.7) !important;
 }
 
 
@@ -428,19 +434,8 @@ footer::after {
     border-top: 1px solid #d0d0d0;
 }
 
-/* ===== HIDE PERMALINK PILCROW BUT KEEP HEADING CLICKABLE ===== */
-/* Hide only the pilcrow symbol text, but keep the link */
-.headerlink::after {
-    content: "" !important;
-}
-
-/* Alternative: hide the default pilcrow and show nothing */
-.headerlink {
-    text-decoration: none !important;
-    color: transparent !important;
-}
-
-/* Make headings show they're clickable */
+/* ===== HIDE PERMALINK PILCROW BUT MAKE ENTIRE HEADING CLICKABLE ===== */
+/* Wrap the entire heading content in the headerlink */
 .content h1,
 .content h2,
 .content h3,
@@ -451,7 +446,33 @@ footer::after {
     position: relative !important;
 }
 
-/* When hovering over heading, show an indicator */
+/* Hide the pilcrow symbol */
+.headerlink {
+    text-decoration: none !important;
+}
+
+/* Hide only the pilcrow text content */
+.headerlink::before {
+    content: none !important;
+}
+
+/* Make the headerlink cover the entire heading */
+.content h1 .headerlink,
+.content h2 .headerlink,
+.content h3 .headerlink,
+.content h4 .headerlink,
+.content h5 .headerlink,
+.content h6 .headerlink {
+    color: transparent !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    z-index: 1 !important;
+}
+
+/* When hovering over heading, change color */
 .content h1:hover,
 .content h2:hover,
 .content h3:hover,
@@ -461,18 +482,17 @@ footer::after {
     color: #0066cc !important;
 }
 
-/* Show a subtle link indicator on hover instead of pilcrow */
-.content h1:hover .headerlink::before,
-.content h2:hover .headerlink::before,
-.content h3:hover .headerlink::before,
-.content h4:hover .headerlink::before,
-.content h5:hover .headerlink::before,
-.content h6:hover .headerlink::before {
-    content: "🔗" !important;
-    color: #0066cc !important;
+/* Show a link icon on hover */
+.content h1:hover::after,
+.content h2:hover::after,
+.content h3:hover::after,
+.content h4:hover::after,
+.content h5:hover::after,
+.content h6:hover::after {
+    content: " 🔗" !important;
     font-size: 0.7em !important;
-    margin-left: 8px !important;
     opacity: 0.6 !important;
+    margin-left: 8px !important;
 }
 
 /* ===== FOCUS INDICATORS ===== */

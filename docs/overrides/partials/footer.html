@@ -1,5 +1,34 @@
-<!-- Custom footer completely replacing Dracula footer -->
+<!-- Custom footer with navigation and copyright -->
 <footer class="md-footer" style="background-color: #0c0c0c !important;">
+  <!-- Navigation section (Previous/Next) -->
+  {% if page.previous_page or page.next_page %}
+  <nav class="md-footer__inner md-grid" aria-label="Footer" style="background-color: #0c0c0c !important;">
+    {% if page.previous_page %}
+    <a href="{{ page.previous_page.url | url }}" class="md-footer__link md-footer__link--prev" aria-label="Previous: {{ page.previous_page.title | e }}" rel="prev">
+      <div class="md-footer__button md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </div>
+      <div class="md-footer__title">
+        <span class="md-footer__direction">Previous</span>
+        <div class="md-ellipsis">{{ page.previous_page.title }}</div>
+      </div>
+    </a>
+    {% endif %}
+    {% if page.next_page %}
+    <a href="{{ page.next_page.url | url }}" class="md-footer__link md-footer__link--next" aria-label="Next: {{ page.next_page.title | e }}" rel="next">
+      <div class="md-footer__title">
+        <span class="md-footer__direction">Next</span>
+        <div class="md-ellipsis">{{ page.next_page.title }}</div>
+      </div>
+      <div class="md-footer__button md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+      </div>
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+  
+  <!-- Copyright section -->
   <div class="md-footer-meta md-typeset" style="background-color: #0c0c0c !important; border-top: 2px solid #00ff00 !important;">
     <div class="md-footer-meta__inner md-grid" style="background-color: #0c0c0c !important;">
       <div class="md-footer-copyright" style="color: #00ff00 !important; font-family: 'Courier New', Courier, monospace !important; text-align: center !important; padding: 20px !important;">
