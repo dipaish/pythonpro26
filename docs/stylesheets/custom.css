@@ -113,16 +113,17 @@ article a:visited {
     background-color: #0c0c0c !important;
     color: #00ff00 !important;
     border: 1px solid #00ff00;
-    padding: 2px 6px;
+    padding: 3px 8px;
     border-radius: 3px;
     font-family: 'Courier New', Courier, monospace !important;
+    font-size: 15px !important;
 }
 
 /* Code blocks - Linux terminal appearance */
 .content pre {
     background-color: #0c0c0c !important;
     border: 2px solid #00ff00 !important;
-    padding: 16px;
+    padding: 20px;
     border-radius: 6px;
     position: relative;
     box-shadow: 0 2px 8px rgba(0, 255, 0, 0.2);
@@ -134,8 +135,9 @@ article a:visited {
     display: block;
     color: #00ff00 !important;
     font-family: 'Courier New', Courier, monospace !important;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: bold;
+    font-size: 15px !important;
 }
 
 .content pre code {
@@ -143,6 +145,8 @@ article a:visited {
     color: #00ff00 !important;
     border: none;
     font-family: 'Courier New', Courier, monospace !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
 }
 
@@ -207,63 +211,71 @@ article a:visited {
 /* Remove button customizations - let Dracula theme handle buttons */
 
 /* ===== PREVIOUS/NEXT NAVIGATION BUTTONS ===== */
-/* Improve visibility of footer navigation buttons */
+/* Terminal-style footer navigation buttons */
 .md-footer__inner,
 .md-footer-nav {
-    background-color: #1a1a1a !important;
+    background-color: #0c0c0c !important;
 }
 
 .md-footer-nav__link {
-    background-color: #f8f8f2 !important;
-    color: #282a36 !important;
-    border: 2px solid #bd93f9 !important;
+    background-color: #0c0c0c !important;
+    color: #00ff00 !important;
+    border: 2px solid #00ff00 !important;
     padding: 12px 20px !important;
     font-weight: 600 !important;
+    font-family: 'Courier New', Courier, monospace !important;
     border-radius: 6px !important;
     transition: all 0.2s ease !important;
+    box-shadow: 0 2px 8px rgba(0, 255, 0, 0.2);
 }
 
 .md-footer-nav__link:hover {
-    background-color: #bd93f9 !important;
-    color: #ffffff !important;
-    border-color: #bd93f9 !important;
+    background-color: #1a1a1a !important;
+    color: #00ff00 !important;
+    border-color: #00ff00 !important;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
 }
 
 .md-footer-nav__link:visited {
-    background-color: #f8f8f2 !important;
-    color: #282a36 !important;
-    border-color: #bd93f9 !important;
+    background-color: #0c0c0c !important;
+    color: #00ff00 !important;
+    border-color: #00ff00 !important;
 }
 
 .md-footer-nav__link:visited:hover {
-    background-color: #bd93f9 !important;
-    color: #ffffff !important;
+    background-color: #1a1a1a !important;
+    color: #00ff00 !important;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
 .md-footer-nav__link:focus {
-    outline: 3px solid #ff79c6 !important;
+    outline: 3px solid #00ff00 !important;
     outline-offset: 2px !important;
 }
 
 /* Ensure title text in navigation buttons is visible */
 .md-footer-nav__title,
 .md-footer-nav__direction {
-    color: inherit !important;
+    color: #00ff00 !important;
+    font-family: 'Courier New', Courier, monospace !important;
 }
 
 .md-footer-nav__link:hover .md-footer-nav__title,
 .md-footer-nav__link:hover .md-footer-nav__direction {
-    color: #ffffff !important;
+    color: #00ff00 !important;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
 }
 
 .md-footer-nav__link:visited .md-footer-nav__title,
 .md-footer-nav__link:visited .md-footer-nav__direction {
-    color: #282a36 !important;
+    color: #00ff00 !important;
 }
 
 .md-footer-nav__link:visited:hover .md-footer-nav__title,
 .md-footer-nav__link:visited:hover .md-footer-nav__direction {
-    color: #ffffff !important;
+    color: #00ff00 !important;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
 }
 
 
@@ -417,15 +429,15 @@ footer::after {
 }
 
 /* ===== HIDE PERMALINK PILCROW BUT KEEP HEADING CLICKABLE ===== */
-/* Hide the pilcrow symbol but keep the link functional */
+/* Hide only the pilcrow symbol text, but keep the link */
+.headerlink::after {
+    content: "" !important;
+}
+
+/* Alternative: hide the default pilcrow and show nothing */
 .headerlink {
     text-decoration: none !important;
-    opacity: 0 !important;
-    font-size: 0 !important;
-    width: 0 !important;
-    display: inline !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    color: transparent !important;
 }
 
 /* Make headings show they're clickable */
@@ -449,16 +461,18 @@ footer::after {
     color: #0066cc !important;
 }
 
-/* Make the entire heading area clickable by making headerlink cover the heading */
-.content h1:hover .headerlink,
-.content h2:hover .headerlink,
-.content h3:hover .headerlink,
-.content h4:hover .headerlink,
-.content h5:hover .headerlink,
-.content h6:hover .headerlink {
-    opacity: 0.3 !important;
-    font-size: inherit !important;
-    width: auto !important;
+/* Show a subtle link indicator on hover instead of pilcrow */
+.content h1:hover .headerlink::before,
+.content h2:hover .headerlink::before,
+.content h3:hover .headerlink::before,
+.content h4:hover .headerlink::before,
+.content h5:hover .headerlink::before,
+.content h6:hover .headerlink::before {
+    content: "🔗" !important;
+    color: #0066cc !important;
+    font-size: 0.7em !important;
+    margin-left: 8px !important;
+    opacity: 0.6 !important;
 }
 
 /* ===== FOCUS INDICATORS ===== */
