@@ -10,3 +10,5 @@ Welcome to **PythonPro26** — 168 auto-graded exercises across 6 parts.
 
 Need the full README? See it on GitHub:  
 https://github.com/dipaish/pythonpro26#readme
+
+<!-- build: trigger mkdocs deploy via GitHub Actions; no content change -->
