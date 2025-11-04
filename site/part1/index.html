@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Part 1 (Fundamentals) - PythonPro26</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://dipaish.github.io/pythonpro26/part1/">
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">PythonPro26</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#parts-collapse" aria-expanded="false">
+                    Parts
+                </a>
+                <div class="collapse" id="parts-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Part 1 (Fundamentals)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../part2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Part 2 (Conditionals & Loops)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../part3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Part 3 (Loops & Functions)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../part4/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Part 4 (Functions & Lists)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../part5/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Part 5 (Advanced / optional)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../part6/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Part 6 (Files & Errors)
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../teacher/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    For teachers
+                </a>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href=".."
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../part2/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="part-1-python-programming-fundamentals">Part 1: Python Programming Fundamentals<a class="headerlink" href="#part-1-python-programming-fundamentals" title="Permanent link">&para;</a></h1>
+<p><strong>31 exercises</strong> covering the basics of Python programming: print statements, variables, arithmetic operations, and conditional statements.</p>
+<hr />
+<h2 id="learning-resources">📚 Learning Resources<a class="headerlink" href="#learning-resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Official Course Material:</strong> <a href="https://dipaish.github.io/programming-24/part-1">Part 1 - Introduction to Programming</a></li>
+<li><a href="https://dipaish.github.io/programming-24/part-1/1-getting-started">Getting Started</a> - Print statements and basic syntax</li>
+<li><a href="https://dipaish.github.io/programming-24/part-1/2-information-from-the-user">Information from the User</a> - Input and variables</li>
+<li><a href="https://dipaish.github.io/programming-24/part-1/3-more-about-variables">More About Variables</a> - String operations</li>
+<li><a href="https://dipaish.github.io/programming-24/part-1/4-arithmetic-operations">Arithmetic Operations</a> - Math and calculations</li>
+<li><a href="https://dipaish.github.io/programming-24/part-1/5-conditional-statements">Conditional Statements</a> - if/elif/else logic</li>
+<li><strong>Tasks Repository:</strong> <a href="https://github.com/dipaish/pythonpro26/tree/main/part1/part1Exercises/tasks/">GitHub - part1/part1Exercises/tasks/</a></li>
+</ul>
+<hr />
+<h2 id="learning-objectives">🎯 Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By completing Part 1, you will learn to:</p>
+<ul>
+<li>✅ Write and execute Python programs</li>
+<li>✅ Use <code>print()</code> to display output</li>
+<li>✅ Get user input with <code>input()</code></li>
+<li>✅ Store and manipulate data with variables</li>
+<li>✅ Perform arithmetic operations (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code>)</li>
+<li>✅ Make decisions using <code>if</code>, <code>elif</code>, and <code>else</code> statements</li>
+<li>✅ Compare values with comparison operators (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>)</li>
+<li>✅ Combine conditions with logical operators (<code>and</code>, <code>or</code>, <code>not</code>)</li>
+</ul>
+<hr />
+<h2 id="course-structure">📋 Course Structure<a class="headerlink" href="#course-structure" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Tasks</th>
+<th>Topics Covered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Getting Started</strong></td>
+<td>10</td>
+<td>Basic print statements, user input, string operations</td>
+</tr>
+<tr>
+<td><strong>1.1 More About Variables</strong></td>
+<td>3</td>
+<td>Variable usage, string formatting, fixing errors</td>
+</tr>
+<tr>
+<td><strong>1.2 Arithmetic Operations</strong></td>
+<td>8</td>
+<td>Math operators, calculations, type conversion, integer division</td>
+</tr>
+<tr>
+<td><strong>1.3 Conditional Statements</strong></td>
+<td>10</td>
+<td>if/elif/else, comparisons, boolean logic, decision making</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total:</strong> 31 tasks × 1 point each = <strong>31 points</strong></p>
+<hr />
+<h2 id="getting-started">🚀 Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<h3 id="option-1-github-codespaces-recommended">Option 1: GitHub Codespaces (Recommended)<a class="headerlink" href="#option-1-github-codespaces-recommended" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open your forked repository on GitHub</li>
+<li>Click <strong>Code</strong> → <strong>Codespaces</strong> → <strong>Create codespace on main</strong></li>
+<li>Wait for the environment to load (30-60 seconds)</li>
+<li>Navigate to Part 1 tasks:
+   <code>bash
+   cd part1/part1Exercises/tasks</code></li>
+</ol>
+<h3 id="option-2-local-development">Option 2: Local Development<a class="headerlink" href="#option-2-local-development" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Clone the repository:
+   <code>bash
+   git clone https://github.com/YOUR_USERNAME/pythonpro26.git
+   cd pythonpro26/part1/part1Exercises/tasks</code></p>
+</li>
+<li>
+<p>Ensure Python 3.11+ is installed:
+   <code>bash
+   python --version</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="how-to-complete-tasks">📝 How to Complete Tasks<a class="headerlink" href="#how-to-complete-tasks" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-open-a-task-file">Step 1: Open a Task File<a class="headerlink" href="#step-1-open-a-task-file" title="Permanent link">&para;</a></h3>
+<p>All tasks are in: <code>part1/part1Exercises/tasks/</code></p>
+<p>Example: <code>1_emoticon.py</code>, <code>1.2.1_times_five.py</code>, <code>1.3.1_orwell.py</code></p>
+<h3 id="step-2-read-the-instructions">Step 2: Read the Instructions<a class="headerlink" href="#step-2-read-the-instructions" title="Permanent link">&para;</a></h3>
+<p>Each file contains:
+- Task description
+- Sample input/output
+- Hints (if applicable)</p>
+<h3 id="step-3-write-your-solution">Step 3: Write Your Solution<a class="headerlink" href="#step-3-write-your-solution" title="Permanent link">&para;</a></h3>
+<p>Replace the TODO comment with your code:</p>
+<pre><code class="language-python">&quot;&quot;&quot;
+Task: Print a smiley emoticon :-)
+&quot;&quot;&quot;
+
+# TODO: Write your solution below this line
+print(&quot;:-)&quot;)  # Your solution here
+</code></pre>
+<h3 id="step-4-test-your-code">Step 4: Test Your Code<a class="headerlink" href="#step-4-test-your-code" title="Permanent link">&para;</a></h3>
+<p>Run the file to see if it works:</p>
+<pre><code class="language-bash"># Windows PowerShell
+python 1_emoticon.py
+
+# macOS/Linux
+python3 1_emoticon.py
+</code></pre>
+<h3 id="step-5-grade-your-work">Step 5: Grade Your Work<a class="headerlink" href="#step-5-grade-your-work" title="Permanent link">&para;</a></h3>
+<p>Run the auto-grader to check all solutions:</p>
+<pre><code class="language-bash"># From the tasks directory
+python grade_part1.py
+</code></pre>
+<p>The grader will:
+- ✓ Test each task's output
+- ✓ Award 1 point per correct solution
+- ✓ Save progress to <code>.progress/points.json</code>
+- ✓ Generate a report in <code>.progress/marksheet.md</code></p>
+<hr />
+<h2 id="section-guides">📖 Section Guides<a class="headerlink" href="#section-guides" title="Permanent link">&para;</a></h2>
+<h3 id="getting-started-10-tasks">Getting Started (10 tasks)<a class="headerlink" href="#getting-started-10-tasks" title="Permanent link">&para;</a></h3>
+<p>Learn the basics of Python output and input.</p>
+<p><strong>📖 Read:</strong> <a href="https://dipaish.github.io/programming-24/part-1/1-getting-started">Getting Started - University of Helsinki</a></p>
+<h4 id="key-concepts">Key Concepts:<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>print()</code> function for output</li>
+<li><code>input()</code> function for user input</li>
+<li>String concatenation with <code>+</code></li>
+<li>Escape sequences (<code>\n</code> for newline)</li>
+</ul>
+<h4 id="example-tasks">Example Tasks:<a class="headerlink" href="#example-tasks" title="Permanent link">&para;</a></h4>
+<p><strong>Task 1: Emoticon</strong></p>
+<pre><code class="language-python"># Print: :-)
+print(&quot;:-)&quot;)
+</code></pre>
+<p><strong>Task 6: Name Twice</strong></p>
+<pre><code class="language-python"># Ask for name and print it twice on one line
+name = input(&quot;Please type in your name: &quot;)
+print(name + &quot; &quot; + name)
+</code></pre>
+<p><strong>Task 10: Story</strong></p>
+<pre><code class="language-python"># Create a story using multiple inputs
+name = input(&quot;Please tell me your name: &quot;)
+year = input(&quot;Which year were you born: &quot;)
+print(&quot;Hi &quot; + name + &quot;! You were born in &quot; + year + &quot;.&quot;)
+</code></pre>
+<hr />
+<h3 id="section-11-more-about-variables-3-tasks">Section 1.1: More About Variables (3 tasks)<a class="headerlink" href="#section-11-more-about-variables-3-tasks" title="Permanent link">&para;</a></h3>
+<p>Master variable usage and output formatting.</p>
+<p><strong>📖 Read:</strong> <a href="https://dipaish.github.io/programming-24/part-1/3-more-about-variables">More About Variables - University of Helsinki</a></p>
+<h4 id="key-concepts_1">Key Concepts:<a class="headerlink" href="#key-concepts_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Variables store values</li>
+<li>String formatting techniques</li>
+<li>Multiple print statements vs. single-line output</li>
+</ul>
+<h4 id="example-tasks_1">Example Tasks:<a class="headerlink" href="#example-tasks_1" title="Permanent link">&para;</a></h4>
+<p><strong>1.1.1 Extra Space</strong></p>
+<pre><code class="language-python"># Print specific text with proper spacing
+print(&quot;Peter Python&quot;)
+print(&quot;Paula Pythonson&quot;)
+print()  # Empty line
+print(&quot;Peter and Paula are quite a pair!&quot;)
+</code></pre>
+<p><strong>1.1.2 Arithmetics</strong></p>
+<pre><code class="language-python"># Print an arithmetic expression that equals 9
+print(&quot;5 + 8 - 4 = 9&quot;)
+</code></pre>
+<p><strong>1.1.3 Fix the Code - Print Single Line</strong></p>
+<pre><code class="language-python"># Fix the code to print on one line
+print(&quot;Hi &quot;, end=&quot;&quot;)
+print(&quot;there!&quot;)
+# Output: Hi there!
+</code></pre>
+<hr />
+<h3 id="section-12-arithmetic-operations-8-tasks">Section 1.2: Arithmetic Operations (8 tasks)<a class="headerlink" href="#section-12-arithmetic-operations-8-tasks" title="Permanent link">&para;</a></h3>
+<p>Learn to perform calculations and work with numbers.</p>
+<p><strong>📖 Read:</strong> <a href="https://dipaish.github.io/programming-24/part-1/4-arithmetic-operations">Arithmetic Operations - University of Helsinki</a></p>
+<h4 id="key-concepts_2">Key Concepts:<a class="headerlink" href="#key-concepts_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Basic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code></li>
+<li>Integer division: <code>//</code></li>
+<li>Modulo (remainder): <code>%</code></li>
+<li>Exponentiation: <code>**</code></li>
+<li>Type conversion: <code>int()</code>, <code>float()</code>, <code>str()</code></li>
+</ul>
+<h4 id="example-tasks_2">Example Tasks:<a class="headerlink" href="#example-tasks_2" title="Permanent link">&para;</a></h4>
+<p><strong>1.2.1 Times Five</strong></p>
+<pre><code class="language-python"># Multiply user input by 5
+number = int(input(&quot;Please type in a number: &quot;))
+print(f&quot;{number} times 5 is {number * 5}&quot;)
+</code></pre>
+<p><strong>1.2.3 Seconds in a Day</strong></p>
+<pre><code class="language-python"># Calculate seconds in given days
+days = int(input(&quot;How many days? &quot;))
+seconds = days * 24 * 60 * 60
+print(f&quot;Seconds in {days} days: {seconds}&quot;)
+</code></pre>
+<p><strong>1.2.8 Students in Groups</strong></p>
+<pre><code class="language-python"># Divide students into groups using integer division
+students = int(input(&quot;How many students on the course? &quot;))
+group_size = int(input(&quot;Desired group size? &quot;))
+groups = students // group_size
+print(f&quot;Number of groups formed: {groups}&quot;)
+</code></pre>
+<hr />
+<h3 id="section-13-conditional-statements-10-tasks">Section 1.3: Conditional Statements (10 tasks)<a class="headerlink" href="#section-13-conditional-statements-10-tasks" title="Permanent link">&para;</a></h3>
+<p>Make your programs intelligent with decision-making logic.</p>
+<p><strong>📖 Read:</strong> <a href="https://dipaish.github.io/programming-24/part-1/5-conditional-statements">Conditional Statements - University of Helsinki</a></p>
+<h4 id="key-concepts_3">Key Concepts:<a class="headerlink" href="#key-concepts_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>if</code> statement for single condition</li>
+<li><code>elif</code> for multiple alternative conditions</li>
+<li><code>else</code> for default case</li>
+<li>Comparison operators: <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></li>
+<li>Logical operators: <code>and</code>, <code>or</code>, <code>not</code></li>
+</ul>
+<h4 id="example-tasks_3">Example Tasks:<a class="headerlink" href="#example-tasks_3" title="Permanent link">&para;</a></h4>
+<p><strong>1.3.1 Orwell</strong></p>
+<pre><code class="language-python"># Check if year is 1984
+year = int(input(&quot;Please type in a number: &quot;))
+if year == 1984:
+    print(&quot;Orwell&quot;)
+</code></pre>
+<p><strong>1.3.2 Absolute Value</strong></p>
+<pre><code class="language-python"># Calculate absolute value without using abs()
+number = int(input(&quot;Please type in a number: &quot;))
+if number &lt; 0:
+    print(f&quot;The absolute value is {-number}&quot;)
+else:
+    print(f&quot;The absolute value is {number}&quot;)
+</code></pre>
+<p><strong>1.3.5 Calculator</strong></p>
+<pre><code class="language-python"># Simple calculator with operation choice
+num1 = int(input(&quot;Number 1: &quot;))
+num2 = int(input(&quot;Number 2: &quot;))
+operation = input(&quot;Operation: &quot;)
+
+if operation == &quot;add&quot;:
+    print(f&quot;{num1} + {num2} = {num1 + num2}&quot;)
+elif operation == &quot;multiply&quot;:
+    print(f&quot;{num1} * {num2} = {num1 * num2}&quot;)
+elif operation == &quot;subtract&quot;:
+    print(f&quot;{num1} - {num2} = {num1 - num2}&quot;)
+</code></pre>
+<p><strong>1.3.7 Daily Wages</strong></p>
+<pre><code class="language-python"># Calculate wages with double pay on Sunday
+hours = int(input(&quot;Hours: &quot;))
+day = input(&quot;Day of the week: &quot;)
+hourly_wage = 15
+
+if day == &quot;Sunday&quot;:
+    wage = hours * hourly_wage * 2
+else:
+    wage = hours * hourly_wage
+
+print(f&quot;Daily wages: {wage} euros&quot;)
+</code></pre>
+<p><strong>1.3.10 Solving a Quadratic Equation</strong></p>
+<pre><code class="language-python"># Solve ax² + bx + c = 0 using quadratic formula
+from math import sqrt
+
+a = float(input(&quot;Value of a: &quot;))
+b = float(input(&quot;Value of b: &quot;))
+c = float(input(&quot;Value of c: &quot;))
+
+root1 = (-b + sqrt(b**2 - 4*a*c)) / (2*a)
+root2 = (-b - sqrt(b**2 - 4*a*c)) / (2*a)
+
+print(f&quot;The roots are {root1} and {root2}&quot;)
+</code></pre>
+<hr />
+<h2 id="grading-progress-tracking">🎓 Grading &amp; Progress Tracking<a class="headerlink" href="#grading-progress-tracking" title="Permanent link">&para;</a></h2>
+<h3 id="running-the-grader">Running the Grader<a class="headerlink" href="#running-the-grader" title="Permanent link">&para;</a></h3>
+<p>From the tasks directory:</p>
+<pre><code class="language-bash">cd part1/part1Exercises/tasks
+python grade_part1.py
+</code></pre>
+<h3 id="grading-criteria">Grading Criteria<a class="headerlink" href="#grading-criteria" title="Permanent link">&para;</a></h3>
+<p>Each task is evaluated based on:
+- ✓ Correct output format
+- ✓ Handling of user input (for interactive tasks)
+- ✓ Implementation presence (no empty TODO stubs)</p>
+<p><strong>Scoring:</strong>
+- ✅ <strong>Pass (1 point):</strong> Output matches expected result
+- ❌ <strong>Fail (0 points):</strong> Incorrect output or no implementation</p>
+<h3 id="progress-files">Progress Files<a class="headerlink" href="#progress-files" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Points:</strong> <code>.progress/points.json</code> (raw scores)</li>
+<li><strong>Report:</strong> <code>.progress/marksheet.md</code> (formatted progress)</li>
+</ul>
+<p>Example marksheet output:</p>
+<pre><code>Part 1: 31/31 ████████████████████ 100%
+</code></pre>
+<hr />
+<h2 id="tips-for-success">💡 Tips for Success<a class="headerlink" href="#tips-for-success" title="Permanent link">&para;</a></h2>
+<h3 id="debugging-tips">Debugging Tips<a class="headerlink" href="#debugging-tips" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Test incrementally:</strong> Run your code after each change</li>
+<li><strong>Check output format:</strong> Match sample output exactly (spaces, punctuation, newlines)</li>
+<li><strong>Read error messages:</strong> Python tells you what went wrong and where</li>
+<li><strong>Use print() for debugging:</strong> Print variable values to see what's happening</li>
+</ol>
+<h3 id="common-mistakes-to-avoid">Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Permanent link">&para;</a></h3>
+<p>❌ <strong>Forgetting to convert input:</strong></p>
+<pre><code class="language-python">age = input(&quot;Age: &quot;)  # This is a string!
+print(age + 1)  # Error: can't add string and int
+</code></pre>
+<p>✅ <strong>Correct approach:</strong></p>
+<pre><code class="language-python">age = int(input(&quot;Age: &quot;))  # Convert to integer
+print(age + 1)  # Works!
+</code></pre>
+<p>❌ <strong>Using <code>=</code> instead of <code>==</code> in conditions:</strong></p>
+<pre><code class="language-python">if year = 1984:  # Error: assignment, not comparison
+</code></pre>
+<p>✅ <strong>Correct approach:</strong></p>
+<pre><code class="language-python">if year == 1984:  # Comparison operator
+</code></pre>
+<p>❌ <strong>Incorrect indentation:</strong></p>
+<pre><code class="language-python">if age &gt;= 18:
+print(&quot;Adult&quot;)  # Error: not indented
+</code></pre>
+<p>✅ <strong>Correct approach:</strong></p>
+<pre><code class="language-python">if age &gt;= 18:
+    print(&quot;Adult&quot;)  # Indented with 4 spaces
+</code></pre>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Use descriptive variable names (<code>age</code> instead of <code>a</code>)</li>
+<li>✅ Add spaces around operators for readability (<code>x + y</code> not <code>x+y</code>)</li>
+<li>✅ Test with different inputs to ensure your code works generally</li>
+<li>✅ Commit your work regularly with git</li>
+</ul>
+<hr />
+<h2 id="saving-your-work">💾 Saving Your Work<a class="headerlink" href="#saving-your-work" title="Permanent link">&para;</a></h2>
+<h3 id="git-workflow">Git Workflow<a class="headerlink" href="#git-workflow" title="Permanent link">&para;</a></h3>
+<p>After completing tasks:</p>
+<pre><code class="language-bash"># Check what changed
+git status
+
+# Add completed tasks
+git add part1/part1Exercises/tasks/1_emoticon.py
+git add part1/part1Exercises/tasks/1.2.1_times_five.py
+
+# Or add all at once
+git add .
+
+# Commit with descriptive message
+git commit -m &quot;Complete Part 1 Getting Started tasks (1-10)&quot;
+
+# Push to GitHub
+git push
+</code></pre>
+<h3 id="commit-message-examples">Commit Message Examples<a class="headerlink" href="#commit-message-examples" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ <code>"Complete Part 1 Getting Started (tasks 1-10)"</code></li>
+<li>✅ <code>"Add Part 1.2 arithmetic operations solutions"</code></li>
+<li>✅ <code>"Fix Part 1.3.5 calculator logic"</code></li>
+</ul>
+<hr />
+<h2 id="task-checklist">📊 Task Checklist<a class="headerlink" href="#task-checklist" title="Permanent link">&para;</a></h2>
+<h3 id="getting-started-1010">Getting Started (10/10)<a class="headerlink" href="#getting-started-1010" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 1_emoticon.py - Print a smiley face</li>
+<li>[ ] 2_seven_brothers.py - Print Seven Brothers names</li>
+<li>[ ] 3_row_your_boat.py - Print song lyrics</li>
+<li>[ ] 4_minutes_in_year.py - Calculate minutes in a year</li>
+<li>[ ] 5_print_some_code.py - Print code as text</li>
+<li>[ ] 6_name_twice.py - Input name, print twice</li>
+<li>[ ] 7_name_excalaimation_mark.py - Name with exclamations</li>
+<li>[ ] 8_name_Address.py - Input and display name/address</li>
+<li>[ ] 9_fix_the_code.py - Fix syntax error</li>
+<li>[ ] 10_story.py - Create story with multiple inputs</li>
+</ul>
+<h3 id="section-11-more-about-variables-33">Section 1.1: More About Variables (3/3)<a class="headerlink" href="#section-11-more-about-variables-33" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 1.1.1_extra_space.py - Print with proper spacing</li>
+<li>[ ] 1.1.2_arithmetics.py - Print arithmetic expression</li>
+<li>[ ] 1.1.3_fix_the_code_print_single_line.py - Fix print to single line</li>
+</ul>
+<h3 id="section-12-arithmetic-operations-88">Section 1.2: Arithmetic Operations (8/8)<a class="headerlink" href="#section-12-arithmetic-operations-88" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 1.2.1_times_five.py - Multiply by 5</li>
+<li>[ ] 1.2.2_name_and_age.py - Calculate age in 2021</li>
+<li>[ ] 1.2.3_seconds_in_a_day.py - Calculate seconds</li>
+<li>[ ] 1.2.4_fix_the_code_product.py - Fix multiplication bug</li>
+<li>[ ] 1.2.5_sum_and_product.py - Calculate sum and product</li>
+<li>[ ] 1.2.6_sum_and_mean.py - Calculate average</li>
+<li>[ ] 1.2.7_food_expenditure.py - Calculate daily/weekly costs</li>
+<li>[ ] 1.2.8_students_in_groups.py - Integer division practice</li>
+</ul>
+<h3 id="section-13-conditional-statements-1010">Section 1.3: Conditional Statements (10/10)<a class="headerlink" href="#section-13-conditional-statements-1010" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 1.3.1_orwell.py - Check if year is 1984</li>
+<li>[ ] 1.3.2_absolute_value.py - Calculate absolute value</li>
+<li>[ ] 1.3.3_soup_or_no_soup.py - Seinfeld reference check</li>
+<li>[ ] 1.3.4_order_of_magnitude.py - Compare to 1000/100/10</li>
+<li>[ ] 1.3.5_calculator.py - Simple calculator</li>
+<li>[ ] 1.3.6_temperatures.py - Fahrenheit to Celsius</li>
+<li>[ ] 1.3.7_daily_wages.py - Calculate wages (double on Sunday)</li>
+<li>[ ] 1.3.8_loyalty_bonus.py - Fix bonus calculation</li>
+<li>[ ] 1.3.9_what_to_wear_tomorrow.py - Weather-based advice</li>
+<li>[ ] 1.3.10_solving_a_quadratic_equation.py - Quadratic formula</li>
+</ul>
+<hr />
+<h2 id="quick-links">🔗 Quick Links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Next:</strong> <a href="../part2/">Part 2 - Conditionals &amp; Loops</a></li>
+<li><strong>Main README:</strong> <a href="../">Course Overview</a></li>
+<li><strong>Setup Guide:</strong> <a href="../setup/">Local Development Setup</a></li>
+<li><strong>Progress:</strong> Check <code>.progress/marksheet.md</code> in your workspace</li>
+</ul>
+<hr />
+<h2 id="getting-help">🆘 Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
+<h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Course Material:</strong> <a href="https://dipaish.github.io/programming-24/part-1">programming-24.mooc.fi/part-1</a></li>
+<li><a href="https://dipaish.github.io/programming-24/part-1/1-getting-started">Getting Started</a></li>
+<li><a href="https://dipaish.github.io/programming-24/part-1/2-information-from-the-user">Information from the User</a></li>
+<li><a href="https://dipaish.github.io/programming-24/part-1/3-more-about-variables">More About Variables</a></li>
+<li><a href="https://dipaish.github.io/programming-24/part-1/4-arithmetic-operations">Arithmetic Operations</a></li>
+<li><a href="https://dipaish.github.io/programming-24/part-1/5-conditional-statements">Conditional Statements</a></li>
+<li><strong>Python Documentation:</strong> <a href="https://docs.python.org/3/">docs.python.org</a></li>
+<li><strong>GitHub Issues:</strong> Report problems or ask questions</li>
+</ul>
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<p><strong>Grader not working?</strong>
+- Make sure you're in the correct directory: <code>part1/part1Exercises/tasks/</code>
+- Check Python version: <code>python --version</code> (need 3.11+)</p>
+<p><strong>Task failing but looks correct?</strong>
+- Compare your output character-by-character with sample output
+- Check for extra spaces, missing newlines, or wrong punctuation
+- Ensure variable names match (case-sensitive)</p>
+<p><strong>Import errors?</strong>
+- For <code>from math import sqrt</code>, make sure it's at the top of the file
+- Don't modify the import statements</p>
+<hr />
+<p><strong>Good luck! Start with task 1_emoticon.py and work your way through. 🐍✨</strong></p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

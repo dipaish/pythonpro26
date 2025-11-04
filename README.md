@@ -406,3 +406,26 @@ For the full legal text, visit: [https://creativecommons.org/licenses/by-nc-sa/4
 ---
 
 **Happy Coding! 🐍**
+
+---
+
+## 📘 Documentation site (GitHub Pages)
+
+This project’s website is built with MkDocs (Dracula theme) and deployed via GitHub Actions.
+
+- Branch used for deploy: `mkdocsTesting` (publish branch)
+- Trigger: any push to `mkdocsTesting`
+- GitHub Pages setting: Source = “GitHub Actions” (Repository → Settings → Pages)
+
+How to publish updates:
+
+1. Commit your documentation changes (files in `docs/` or `mkdocs.yml`) to `mkdocsTesting`.
+2. Push to GitHub. The workflow “Deploy MkDocs (Dracula)” will build and deploy.
+3. Open the Actions run and click the Pages deployment URL, or visit:
+   - https://dipaish.github.io/pythonpro26/
+
+Notes:
+
+- The workflow only deploys on pushes to `mkdocsTesting` (not `main`).
+- If you want to deploy from `main` instead, update `.github/workflows/gh-pages.yml` triggers and the conditional in the `deploy` job.
+- If the site doesn’t look themed, hard-refresh the page (Ctrl+F5) and verify Pages is set to “GitHub Actions.”

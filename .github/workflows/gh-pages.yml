@@ -3,11 +3,9 @@ name: Deploy MkDocs (Dracula)
 on:
   push:
     branches:
-      - main
       - mkdocsTesting
   pull_request:
     branches:
-      - main
       - mkdocsTesting
   workflow_dispatch:
 
@@ -43,7 +41,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    # Only deploy when pushing to mkdocsTesting (preview/publish branch)
+    # Only deploy when pushing to mkdocsTesting (publish branch)
     if: github.event_name == 'push' && github.ref == 'refs/heads/mkdocsTesting'
     environment:
       name: github-pages
