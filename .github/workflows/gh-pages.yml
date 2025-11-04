@@ -2,7 +2,13 @@ name: Deploy MkDocs (Dracula)
 
 on:
   push:
-    branches: [ mkdocsTesting ]
+    branches:
+      - main
+      - mkdocsTesting
+  pull_request:
+    branches:
+      - main
+      - mkdocsTesting
   workflow_dispatch:
 
 permissions:
@@ -19,6 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -30,6 +38,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
