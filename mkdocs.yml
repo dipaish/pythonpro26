@@ -4,7 +4,6 @@ site_url: https://dipaish.github.io/pythonpro26/
 repo_url: https://github.com/dipaish/pythonpro26
 theme:
   name: dracula
-  custom_dir: docs/overrides
 
 extra_css:
   - stylesheets/custom.css
