@@ -619,91 +619,10 @@ footer::after {
 .content ul,
 .content ol {
     color: #1a1a1a !important;
-    list-style-position: outside !important;
-    margin-left: 20px !important;
-    padding-left: 20px !important;
-}
-
-.content ul {
-    list-style-type: disc !important;
-}
-
-.content ol {
-    list-style-type: decimal !important;
 }
 
 .content li {
     color: #1a1a1a !important;
-    display: list-item !important;
-}
-
-/* Nested lists */
-.content ul ul {
-    list-style-type: circle !important;
-}
-
-.content ul ul ul {
-    list-style-type: square !important;
-}
-
-/* Ensure bullets/numbers are visible - global rules */
-ul, ol {
-    list-style-position: outside !important;
-    margin-left: 20px !important;
-    padding-left: 20px !important;
-}
-
-ul {
-    list-style-type: disc !important;
-}
-
-ol {
-    list-style-type: decimal !important;
-}
-
-li {
-    display: list-item !important;
-}
-
-/* ===== LISTS INSIDE DETAILS/SUMMARY (collapsible sections) ===== */
-details ul,
-details ol {
-    list-style-position: outside !important;
-    margin-left: 20px !important;
-    padding-left: 20px !important;
-}
-
-details ul {
-    list-style-type: disc !important;
-}
-
-details ol {
-    list-style-type: decimal !important;
-}
-
-details li {
-    display: list-item !important;
-    color: #1a1a1a !important;
-}
-
-/* Nested lists inside details */
-details ul ul {
-    list-style-type: circle !important;
-}
-
-details ul ul ul {
-    list-style-type: square !important;
-}
-
-/* Summary styling */
-summary {
-    cursor: pointer !important;
-    font-weight: 600 !important;
-    margin-bottom: 10px !important;
-}
-
-summary:hover {
-    color: #0066cc !important;
 }
 
 /* ===== ENSURE PROPER CONTRAST ===== */
