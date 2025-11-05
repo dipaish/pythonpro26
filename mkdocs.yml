@@ -14,7 +14,6 @@ extra_javascript:
   - javascripts/copy-code.js
   - javascripts/footer.js
   - javascripts/nav-style.js
-  - javascripts/sidebar-toggle.js
 
 extra:
   social:
