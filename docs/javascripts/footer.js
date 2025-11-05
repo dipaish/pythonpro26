@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Replace the entire content with terminal-styled footer
     footerCopyright.innerHTML = `
       <div style="background-color: #0c0c0c !important; text-align: center !important; font-family: 'Courier New', Courier, monospace; color: #00ff00 !important; padding: 20px; width: 100%; margin: 0 auto;">
-        <p style="color: #00ff00 !important; margin: 10px 0; font-size: 14px;">
+        <p style="color: #00ff00 !important; margin: 10px 0; font-size: 16px;">
           Deepak Chhetri. | Site last generated: Nov 05, 2025
         </p>
-        <p style="color: #00ff00 !important; margin: 10px 0; font-size: 14px;">
+        <p style="color: #00ff00 !important; margin: 10px 0; font-size: 16px;">
           <a href="https://github.com/dipaish" target="_blank" rel="noopener" style="color: #00ff00 !important; text-decoration: underline; margin: 0 10px;">GitHub</a> |
           <a href="https://www.linkedin.com/in/kcdeepak112/" target="_blank" rel="noopener" style="color: #00ff00 !important; text-decoration: underline; margin: 0 10px;">LinkedIn</a>
         </p>
@@ -54,12 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     draculaFooter.innerHTML = `
       <div style="background-color: #0c0c0c !important; text-align: center !important; font-family: 'Courier New', Courier, monospace; color: #00ff00 !important; padding: 20px; width: 100%;">
-        <p style="color: #00ff00 !important; margin: 10px 0; font-size: 14px;">©2024 Deepak KC. All rights reserved. | Site last generated: Nov 05, 2025</p>
-        <p style="color: #00ff00 !important; margin: 10px 0; font-size: 14px;">
+        <p style="color: #00ff00 !important; margin: 10px 0; font-size: 16px;">©2024 Deepak KC. All rights reserved. | Site last generated: Nov 05, 2025</p>
+        <p style="color: #00ff00 !important; margin: 10px 0; font-size: 16px;">
           <a href="https://github.com/dipaish" target="_blank" style="color: #00ff00 !important; text-decoration: underline; margin: 0 10px;">GitHub</a> |
           <a href="https://www.linkedin.com/in/kcdeepak112/" target="_blank" style="color: #00ff00 !important; text-decoration: underline; margin: 0 10px;">LinkedIn</a>
         </p>
-        <p style="color: #00ff00 !important; margin: 10px 0; font-size: 12px;">user@pythonpro26:~$ █</p>
+        <p style="color: #00ff00 !important; margin: 10px 0; font-size: 14px;">user@pythonpro26:~$ █</p>
       </div>
     `;
   }
