@@ -13,6 +13,7 @@ extra_css:
 extra_javascript:
   - javascripts/copy-code.js
   - javascripts/footer.js
+  - javascripts/nav-style.js
 
 extra:
   social:
