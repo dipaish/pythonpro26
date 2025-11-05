@@ -294,7 +294,7 @@ article a:visited {
 
 .md-footer-nav__link {
     background-color: #2a2a2a !important;
-    color: #00ff00 !important;
+    color: #ffffff !important; /* White text for better visibility */
     border: 2px solid #00ff00 !important;
     padding: 12px 20px !important;
     font-weight: 600 !important;
@@ -302,30 +302,27 @@ article a:visited {
     border-radius: 6px !important;
     transition: all 0.2s ease !important;
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.8) !important;
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8) !important;
+    text-shadow: none !important; /* Remove glow for readability */
 }
 
 .md-footer-nav__link:hover {
     background-color: #333333 !important;
-    color: #00ff00 !important;
+    color: #ffffff !important;
     border-color: #00ff00 !important;
     box-shadow: 0 0 20px rgba(0, 255, 0, 1) !important;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 1) !important;
 }
 
 .md-footer-nav__link:visited {
     background-color: #2a2a2a !important;
-    color: #00ff00 !important;
+    color: #ffffff !important;
     border-color: #00ff00 !important;
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.8) !important;
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8) !important;
 }
 
 .md-footer-nav__link:visited:hover {
     background-color: #333333 !important;
-    color: #00ff00 !important;
+    color: #ffffff !important;
     box-shadow: 0 0 20px rgba(0, 255, 0, 1) !important;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 1) !important;
 }
 
 .md-footer-nav__link:focus {
@@ -333,30 +330,40 @@ article a:visited {
     outline-offset: 2px !important;
 }
 
-/* Ensure title text in navigation buttons is visible with glow */
+/* Ensure title text in navigation buttons is white for accessibility */
 .md-footer-nav__title,
 .md-footer-nav__direction {
-    color: #00ff00 !important;
+    color: #ffffff !important;
     font-family: 'Courier New', Courier, monospace !important;
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8) !important;
+    text-shadow: none !important;
 }
 
 .md-footer-nav__link:hover .md-footer-nav__title,
 .md-footer-nav__link:hover .md-footer-nav__direction {
-    color: #00ff00 !important;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 1) !important;
+    color: #ffffff !important;
 }
 
 .md-footer-nav__link:visited .md-footer-nav__title,
 .md-footer-nav__link:visited .md-footer-nav__direction {
-    color: #00ff00 !important;
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8) !important;
+    color: #ffffff !important;
 }
 
 .md-footer-nav__link:visited:hover .md-footer-nav__title,
 .md-footer-nav__link:visited:hover .md-footer-nav__direction {
-    color: #00ff00 !important;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 1) !important;
+    color: #ffffff !important;
+}
+
+/* Make SVG icons in footer navigation white */
+.md-footer-nav__link svg,
+.md-footer-nav__button svg,
+.md-footer__inner svg {
+    fill: #ffffff !important;
+}
+
+.md-footer-nav__link svg path,
+.md-footer-nav__button svg path,
+.md-footer__inner svg path {
+    fill: #ffffff !important;
 }
 
 /* Footer copyright section - terminal black background */
