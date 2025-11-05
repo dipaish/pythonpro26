@@ -311,6 +311,29 @@ article a:visited {
     text-shadow: 0 0 8px rgba(0, 255, 0, 0.7) !important;
 }
 
+/* Footer copyright section - terminal black background */
+.md-footer {
+    background-color: #0c0c0c !important;
+    border-top: 2px solid #00ff00 !important;
+}
+
+.md-footer-meta {
+    background-color: #0c0c0c !important;
+}
+
+.md-footer-meta__inner {
+    background-color: #0c0c0c !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.md-footer-copyright {
+    background-color: #0c0c0c !important;
+    text-align: center !important;
+    width: 100% !important;
+    color: #00ff00 !important;
+}
+
 
 /* ===== BADGES/TAGS ===== */
 .content .badge {
