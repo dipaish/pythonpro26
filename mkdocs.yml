@@ -5,6 +5,8 @@ repo_url: https://github.com/dipaish/pythonpro26
 theme:
   name: dracula
   custom_dir: docs/overrides
+  logo: ddd.png
+  favicon: ddd.png
 
 extra_css:
   - stylesheets/custom.css
