@@ -619,10 +619,50 @@ footer::after {
 .content ul,
 .content ol {
     color: #1a1a1a !important;
+    list-style-position: outside !important;
+    margin-left: 20px !important;
+    padding-left: 20px !important;
+}
+
+.content ul {
+    list-style-type: disc !important;
+}
+
+.content ol {
+    list-style-type: decimal !important;
 }
 
 .content li {
     color: #1a1a1a !important;
+    display: list-item !important;
+}
+
+/* Nested lists */
+.content ul ul {
+    list-style-type: circle !important;
+}
+
+.content ul ul ul {
+    list-style-type: square !important;
+}
+
+/* Ensure bullets/numbers are visible */
+ul, ol {
+    list-style-position: outside !important;
+    margin-left: 20px !important;
+    padding-left: 20px !important;
+}
+
+ul {
+    list-style-type: disc !important;
+}
+
+ol {
+    list-style-type: decimal !important;
+}
+
+li {
+    display: list-item !important;
 }
 
 /* ===== ENSURE PROPER CONTRAST ===== */
