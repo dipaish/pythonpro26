@@ -80,11 +80,44 @@ body {
         top: 64px; /* leave room for the header */
         max-height: calc(100vh - 64px);
         overflow-y: auto;
+        overflow-x: hidden; /* prevent horizontal scrollbar */
         overscroll-behavior: contain; /* avoid scrolling the page when at ends */
     }
 
     /* If the layout uses flex, ensure the sticky element starts at the top */
     .sidebar { align-self: flex-start; }
+}
+
+/* ===== PREV/NEXT NAV BUTTONS - universal targeting ===== */
+/* Style navigation links that use rel attribute, regardless of theme markup */
+a[rel="prev"],
+a[rel="next"] {
+    background-color: #2a2a2a !important;
+    color: #00ff00 !important;
+    border: 2px solid #00ff00 !important;
+    padding: 10px 16px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-decoration: none !important; /* remove underline to look like a button */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8) !important;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8) !important;
+}
+
+a[rel="prev"]:hover,
+a[rel="next"]:hover {
+    background-color: #333333 !important;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1) !important;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 1) !important;
+}
+
+/* If icons exist inside the links, make them green too */
+a[rel="prev"] svg path,
+a[rel="next"] svg path {
+    fill: #00ff00 !important;
 }
 
 /* Content text - dark for readability on white */
