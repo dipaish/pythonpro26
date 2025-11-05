@@ -70,6 +70,23 @@ body {
     background-color: #f5f5f5 !important;
 }
 
+/* ===== STICKY LEFT SIDEBAR ===== */
+/* Keep the left navigation visible while scrolling on desktop */
+@media (min-width: 992px) {
+    #sidebar,
+    nav#sidebar,
+    .sidebar {
+        position: sticky !important;
+        top: 64px; /* leave room for the header */
+        max-height: calc(100vh - 64px);
+        overflow-y: auto;
+        overscroll-behavior: contain; /* avoid scrolling the page when at ends */
+    }
+
+    /* If the layout uses flex, ensure the sticky element starts at the top */
+    .sidebar { align-self: flex-start; }
+}
+
 /* Content text - dark for readability on white */
 .content,
 .content p,
@@ -315,6 +332,8 @@ article a:visited {
 .md-footer {
     background-color: #0c0c0c !important;
     border-top: 2px solid #00ff00 !important;
+    /* Ensure footer is not sticky/fixed */
+    position: static !important;
 }
 
 .md-footer-meta {
@@ -325,6 +344,11 @@ article a:visited {
     background-color: #0c0c0c !important;
     text-align: center !important;
     width: 100% !important;
+}
+
+/* Hard override: footer should participate in normal flow (not sticky) */
+footer {
+    position: static !important;
 }
 
 .md-footer-copyright {
