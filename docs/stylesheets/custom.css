@@ -92,35 +92,33 @@ body {
 /* Style navigation links that use rel attribute, regardless of theme markup */
 a[rel="prev"],
 a[rel="next"] {
-    background-color: #2a2a2a !important;
-    color: #00ff00 !important;
-    border: 2px solid #00ff00 !important;
-    padding: 10px 16px !important;
-    border-radius: 6px !important;
-    font-weight: 600 !important;
-    font-family: 'Courier New', Courier, monospace !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    text-decoration: none !important; /* remove underline to look like a button */
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8) !important;
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8) !important;
+  background-color: #2a2a2a !important;
+  color: #ffffff !important; /* White text for better accessibility */
+  border: 2px solid #00ff00 !important;
+  padding: 10px 16px !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  font-family: 'Courier New', Courier, monospace !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important; /* remove underline to look like a button */
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.8) !important;
+  text-shadow: none !important; /* Remove glow for readability */
 }
 
 a[rel="prev"]:hover,
 a[rel="next"]:hover {
-    background-color: #333333 !important;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 1) !important;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 1) !important;
+  background-color: #333333 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 1) !important;
 }
 
-/* If icons exist inside the links, make them green too */
+/* If icons exist inside the links, make them white too */
 a[rel="prev"] svg path,
 a[rel="next"] svg path {
-    fill: #00ff00 !important;
-}
-
-/* Content text - dark for readability on white */
+  fill: #ffffff !important;
+}/* Content text - dark for readability on white */
 .content,
 .content p,
 .content li,
