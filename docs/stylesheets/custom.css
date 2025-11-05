@@ -70,22 +70,28 @@ body {
     background-color: #f5f5f5 !important;
 }
 
-/* ===== STICKY LEFT SIDEBAR ===== */
-/* Keep the left navigation visible while scrolling on desktop */
-@media (min-width: 992px) {
-    #sidebar,
-    nav#sidebar,
-    .sidebar {
-        position: sticky !important;
-        top: 64px; /* leave room for the header */
-        max-height: calc(100vh - 64px);
-        overflow-y: auto;
-        overflow-x: hidden; /* prevent horizontal scrollbar */
-        overscroll-behavior: contain; /* avoid scrolling the page when at ends */
-    }
+/* ===== PREVENT SIDEBAR COLLAPSE ===== */
+/* Disable sidebar hiding/collapsing functionality */
+#sidebar,
+nav#sidebar,
+.sidebar,
+.md-sidebar,
+[data-md-component="sidebar"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
 
-    /* If the layout uses flex, ensure the sticky element starts at the top */
-    .sidebar { align-self: flex-start; }
+/* Prevent drawer/hamburger menu from hiding sidebar on desktop */
+@media (min-width: 992px) {
+    #__drawer,
+    input[id="__drawer"] {
+        display: none !important;
+    }
+    
+    label[for="__drawer"] {
+        display: none !important;
+    }
 }
 
 /* ===== PREV/NEXT NAV BUTTONS - universal targeting ===== */
