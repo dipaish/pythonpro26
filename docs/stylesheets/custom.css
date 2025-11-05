@@ -384,7 +384,7 @@ footer .drac-bg-black-secondary {
     background-color: #0c0c0c !important;
 }
 
-/* Show and style all footer content from our custom template */
+/* Show and style footer content from mkdocs.yml copyright */
 footer,
 footer *,
 .md-footer,
@@ -392,49 +392,33 @@ footer *,
     visibility: visible !important;
 }
 
-/* Hide the default "Made with Dracula" text completely */
+/* Style the copyright section from mkdocs.yml */
 footer .md-footer-copyright,
 footer .md-footer-copyright__highlight {
-    font-size: 0 !important;
-    line-height: 0 !important;
+    display: block !important;
+    text-align: center !important;
+    visibility: visible !important;
 }
 
-/* Hide any text nodes but show our custom elements */
+/* Ensure all content in copyright is visible */
+footer .md-footer-copyright *,
 footer .md-footer-copyright > * {
-    font-size: 0 !important;
+    visibility: visible !important;
+    display: revert !important;
 }
 
-/* Inject custom content using CSS */
-footer .md-footer-copyright::before {
-    content: "©2024 Deepak KC. All rights reserved. | Site last generated: Nov 04, 2025" !important;
-    display: block !important;
-    color: #00ff00 !important;
-    font-family: 'Courier New', Courier, monospace !important;
-    font-size: 14px !important;
-    line-height: 1.6 !important;
-    text-align: center !important;
-    margin: 8px 0 !important;
-}
-
-footer .md-footer-copyright::after {
-    content: "GitHub: github.com/dipaish | LinkedIn: linkedin.com/in/kcdeepak112/ \A user@pythonpro26:~$ █" !important;
-    display: block !important;
-    color: #00ff00 !important;
-    font-family: 'Courier New', Courier, monospace !important;
-    font-size: 12px !important;
-    line-height: 1.8 !important;
-    text-align: center !important;
-    white-space: pre-line !important;
-    margin: 8px 0 !important;
-}
-
-/* Style links in copyright section if template works */
+/* Style paragraphs and links from mkdocs.yml copyright */
+footer .md-footer-copyright p,
 footer p,
 footer p * {
     visibility: visible !important;
     font-size: 14px !important;
+    color: #00ff00 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    line-height: 1.6 !important;
 }
 
+footer .md-footer-copyright a,
 footer a {
     color: #00ff00 !important;
     text-decoration: underline !important;
