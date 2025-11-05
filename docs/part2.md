@@ -10,7 +10,7 @@
 
 ### Step 1: Ensure that you have studied Module 1: Foundations of Cloud Developing (from canvas) properly
 
-<details>
+<details markdown="1">
   <summary>👉Click to expand the step by step guide</summary>
 
 
@@ -28,7 +28,7 @@ To complete this lab, you will need to set up the following AWS services. It is 
 
 > You will explore AWS CloudShell and connect to a Visual Studio Code IDE environment. You will run AWS CLI commands, create a Python script using the AWS SDK (Boto3), and transfer files between S3, CloudShell, and the IDE. The guide below uses Amazon Linux; ***if you choose Ubuntu, you need to use the equivalent commands***. 
 
-<details>
+<details markdown="1">
   <summary>👉Click to expand the Task 1 Guide</summary>
 
 ### 1: Access AWS CloudShell
@@ -207,7 +207,7 @@ To complete this lab, you will need to set up the following AWS services. It is 
 
 > You will continue working with the same S3 bucket created in Task 1.In this section, you will enable **static website hosting**, configure **public access** with a **bucket policy**, test the website endpoint from the **AWS Management Console** and make a simple update to the `index.html` file.
 
-<details>
+<details markdown="1">
   <summary>👉Click to expand the Task 2 Guide</summary>
 
 ### 1. Verify website files exist
@@ -338,7 +338,7 @@ Refresh your browser at the **Bucket website endpoint**. Now you should now see 
 
 > In this task, you will explore **AWS Identity and Access Management (IAM)** to understand how permissions and roles relate to the work you did in previous tasks. You will review existing IAM roles, policies, and users in the **lab environment**, observe their trust relationships, and understand how IAM integrates with the S3 website. Some IAM actions might be restricted in this environment therefore you need to focus on observation and understanding rather than creation.
 
-<details>
+<details markdown="1">
   <summary>👉Click to expand the Task 3 Guide</summary>
 
 ### 1. Explore IAM in the Console
