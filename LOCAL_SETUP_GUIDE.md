@@ -1,9 +1,8 @@
 # 🖥️ Local Development Setup Guide
 
-This guide will walk you through setting up a complete local development environment for this Python course on **Windows**, **macOS**, or **Linux**.
+This guide will walk you through setting up a complete local development environment for this Python course on **Windows** or **macOS**.
 
-> **💡 Don't want to install anything?** Use [GitHub Codespaces](.devcontainer/README.md) instead! It's free, browser-based, and requires zero setup.
-
+> **Note:** You may already have VS Code installed, logged in with GitHub, and Python installed locally. Depending on your situation, some or all of the following steps may not be required. You can complete all tasks using [GitHub Codespaces](.devcontainer/README.md) directly in your browser, especially for the first part of the course. However, we recommend setting up a local environment as well for a better learning experience and offline access.
 ---
 
 ## 📋 Table of Contents
@@ -40,10 +39,11 @@ You need **Python 3.11 or higher** for this course.
    python --version
    ```
    Should show: `Python 3.11.x` or higher
+---
 
-### 🍎 macOS
+### 🍎 MacOS
 
-#### Option A: Using Official Installer (Recommended for Beginners)
+#### Using Official Installer
 
 1. **Download Python:**
    - Visit [python.org/downloads](https://www.python.org/downloads/)
@@ -58,41 +58,8 @@ You need **Python 3.11 or higher** for this course.
    ```bash
    python3 --version
    ```
+
    Should show: `Python 3.11.x` or higher
-
-#### Option B: Using Homebrew (For Advanced Users)
-
-1. **Install Homebrew** (if not already installed):
-   ```bash
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   ```
-
-2. **Install Python:**
-   ```bash
-   brew install python@3.11
-   ```
-
-3. **Verify:**
-   ```bash
-   python3 --version
-   ```
-
-### 🐧 Linux (Ubuntu)
-
-1. **Update package list:**
-   ```bash
-   sudo apt update
-   ```
-
-2. **Install Python 3.11:**
-   ```bash
-   sudo apt install python3.11 python3.11-venv python3-pip
-   ```
-
-3. **Verify:**
-   ```bash
-   python3.11 --version
-   ```
 
 ---
 
@@ -102,7 +69,7 @@ Git is required for version control and cloning this repository.
 
 ### 🪟 Windows
 
-#### Option A: Git for Windows (Recommended)
+#### Git for Windows 
 
 1. **Download:**
    - Visit [git-scm.com/download/win](https://git-scm.com/download/win)
@@ -120,21 +87,11 @@ Git is required for version control and cloning this repository.
    git --version
    ```
 
-#### Option B: Via Package Manager (Advanced)
+---
 
-Using **Chocolatey**:
-```powershell
-choco install git
-```
+### 🍎 MacOS
 
-Using **Winget**:
-```powershell
-winget install Git.Git
-```
-
-### 🍎 macOS
-
-#### Option A: Using Xcode Command Line Tools (Simplest)
+####  Using Xcode Command Line Tools (Simplest)
 
 1. **Install:**
    ```bash
@@ -147,29 +104,7 @@ winget install Git.Git
    git --version
    ```
 
-#### Option B: Using Homebrew
-
-1. **Install:**
-   ```bash
-   brew install git
-   ```
-
-2. **Verify:**
-   ```bash
-   git --version
-   ```
-
-### 🐧 Linux (Ubuntu)
-
-```bash
-sudo apt update
-sudo apt install git
-```
-
-**Verify:**
-```bash
-git --version
-```
+---
 
 ### Configure Git (All Platforms)
 
@@ -184,7 +119,7 @@ git config --global user.email "your.email@example.com"
 
 ## 3. Install GitHub Desktop (Optional)
 
-GitHub Desktop provides a visual interface for Git. **This is optional** - you can use command-line Git instead.
+GitHub Desktop provides a visual interface for Git. **This is optional**. You can use command line Git instead.
 
 ### 🪟 Windows & 🍎 macOS
 
@@ -201,14 +136,6 @@ GitHub Desktop provides a visual interface for Git. **This is optional** - you c
    - Click **"Sign in to GitHub.com"**
    - Authorize in your browser
    - Return to GitHub Desktop
-
-### 🐧 Linux (Ubuntu)
-
-GitHub Desktop is not officially supported on Linux. Ubuntu users can use:
-
-- **Command-line Git** (recommended - already installed in Step 2)
-- **GitKraken:** [gitkraken.com](https://www.gitkraken.com/) (free for public repos)
-- **GitAhead:** [gitahead.github.io/gitahead.com](https://gitahead.github.io/gitahead.com/) (open source)
 
 ---
 
@@ -232,7 +159,7 @@ GitHub Desktop is not officially supported on Linux. Ubuntu users can use:
    code --version
    ```
 
-### 🍎 macOS
+### 🍎 MacOS
 
 1. **Download:**
    - Visit [code.visualstudio.com](https://code.visualstudio.com/)
@@ -252,30 +179,6 @@ GitHub Desktop is not officially supported on Linux. Ubuntu users can use:
    ```bash
    code --version
    ```
-
-### 🐧 Linux (Ubuntu)
-
-1. **Install via Snap (Easiest):**
-   ```bash
-   sudo snap install --classic code
-   ```
-
-2. **Or via APT:**
-   ```bash
-   # Add Microsoft GPG key and repository
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-   sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
-   sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-   
-   # Install
-   sudo apt update
-   sudo apt install code
-   ```
-
-**Verify:**
-```bash
-code --version
-```
 
 ---
 
@@ -370,66 +273,134 @@ Signing in syncs your settings and enables GitHub features.
 
 ## 7. Clone This Repository
 
-Now you're ready to get the course files!
+Now that you have Git and VS Code set up, let's clone your exercise repository to your local device.
 
-### Method A: Using VS Code (Recommended)
+### Clone Using VS Code Terminal 
 
-1. **Open VS Code**
+This method uses the command line directly in VS Code.
 
-2. **Open Command Palette:**
-   - Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS)
+1. **Get Your Repository URL:**
+   - Go to your GitHub repository in a web browser
+   - Click the green **"<> Code"** button
+   - Select **HTTPS** tab
+   - Click the copy icon to copy the URL
+   - It should look like: `https://github.com/YOUR-USERNAME/REPO-NAME.git`
 
-3. **Type:** `Git: Clone`
+2. **Open VS Code:**
+   - Launch Visual Studio Code
 
-4. **Enter Repository URL:**
+3. **Open the Terminal:**
+   - Press `` Ctrl+` `` (backtick key) or
+   - Go to **Terminal → New Terminal** from the menu
+
+4. **Navigate to Your Desired Location:**
+   
+   Choose where you want to store your project:
+   
+   **Windows:**
+   ```powershell
+   # Navigate to your desired folder (e.g., Documents)
+   cd $HOME\Documents
+   
+   # Or create a dedicated folder for your repos
+   cd $HOME\Documents
+   mkdir GitRepos
+   cd GitRepos
    ```
-   https://github.com/YOUR_USERNAME/pythonpro26.git
-   ```
-   *(Replace `YOUR_USERNAME` with the actual repository owner)*
-
-5. **Choose Location:**
-   - Select where to save the repository
-   - Recommended: Create a `GitRepos` or `Projects` folder
-
-6. **Open Repository:**
-   - VS Code will ask "Would you like to open the cloned repository?"
-   - Click **"Open"**
-
-### Method B: Using GitHub Desktop
-
-1. **Open GitHub Desktop**
-
-2. **File → Clone Repository**
-
-3. **Enter URL:**
-   ```
-   https://github.com/YOUR_USERNAME/pythonpro26.git
-   ```
-
-4. **Choose Local Path** and click **"Clone"**
-
-5. **Open in VS Code:**
-   - Click **"Open in Visual Studio Code"**
-
-### Method C: Using Command Line
-
-1. **Open Terminal** (or Command Prompt/PowerShell on Windows)
-
-2. **Navigate to desired location:**
+   
+   **macOS/Linux:**
    ```bash
-   cd ~/Documents  # or wherever you want
+   # Navigate to your desired folder (e.g., Documents)
+   cd ~/Documents
+   
+   # Or create a dedicated folder for your repos
+   mkdir -p ~/Documents/GitRepos
+   cd ~/Documents/GitRepos
    ```
 
-3. **Clone:**
+5. **Clone the Repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/pythonpro26.git
+   git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
+   ```
+   
+   **Example:**
+   ```bash
+   git clone https://github.com/dipaish/pythonpro26Assignment.git
+   ```
+   
+   You should see output like:
+   ```
+   Cloning into 'pythonpro26Assignment'...
+   remote: Enumerating objects: 150, done.
+   remote: Counting objects: 100% (150/150), done.
+   remote: Compressing objects: 100% (120/120), done.
+   remote: Total 150 (delta 25), reused 140 (delta 20), pack-reused 0
+   Receiving objects: 100% (150/150), 45.20 KiB | 2.26 MiB/s, done.
+   Resolving deltas: 100% (25/25), done.
    ```
 
-4. **Open in VS Code:**
+6. **Open the Cloned Repository:**
    ```bash
-   cd pythonpro26
-   code .
+   code REPO-NAME
    ```
+   
+   **Example:**
+   ```bash
+   code pythonpro26Assignment
+   ```
+   
+   This will open the repository in a new VS Code window.
+
+
+### ✅ Verify the Clone
+
+After cloning, verify the repository structure:
+
+1. **In VS Code Explorer** (left sidebar), you should see:
+   ```
+   📁 pythonpro26Assignment/
+   ├── 📁 part1/
+   ├── 📁 part2/
+   ├── 📁 part3/
+   ├── 📄 README.md
+   ├── 📄 LOCAL_SETUP_GUIDE.md
+   └── ...
+   ```
+
+2. **In Terminal, check Git status:**
+   ```bash
+   git status
+   ```
+   
+   Should show:
+   ```
+   On branch main
+   Your branch is up to date with 'origin/main'.
+   
+   nothing to commit, working tree clean
+   ```
+
+### 🔄 Keeping Your Local Repository Updated
+
+To get the latest changes from GitHub:
+
+```bash
+# Pull latest changes
+git pull
+```
+
+To push your local changes to GitHub:
+
+```bash
+# Add all changed files
+git add .
+
+# Commit with a message
+git commit -m "Completed task 1"
+
+# Push to GitHub
+git push
+```
 
 ---
 
@@ -452,53 +423,6 @@ Let's make sure everything works!
    ```
    
    Should show `Python 3.11.x` or higher
-
-### Test 2: Run a Simple Task
-
-1. **Navigate to Part 1:**
-   ```bash
-   cd part1/part1Exercises/tasks
-   ```
-
-2. **Run a task:**
-   ```bash
-   # Windows:
-   python 1_emoticon.py
-   
-   # macOS/Linux:
-   python3 1_emoticon.py
-   ```
-
-3. **Expected Output:**
-   ```
-   :-()
-   ```
-
-### Test 3: Run the Grader
-
-1. **Run Part 1 grader:**
-   ```bash
-   # Windows:
-   python grade_part1.py
-   
-   # macOS/Linux:
-   python3 grade_part1.py
-   ```
-
-2. **Check Progress:**
-   - Open `.progress/marksheet.md` to see your scores
-
-### Test 4: Python Extension Works
-
-1. **Open any `.py` file**
-
-2. **Check Bottom-Right Corner:**
-   - Should show Python version (e.g., "Python 3.11.5")
-   - If it says "Select Python Interpreter," click it and choose one
-
-3. **Hover Over Code:**
-   - Hover over `print` - should show documentation popup
-   - If not, Pylance might still be loading (wait 10-20 seconds)
 
 ---
 
@@ -592,21 +516,9 @@ Let's make sure everything works!
 - Make sure your code is **outside** the docstring quotes
 - Remove `pass` statements
 - Actually implement the function logic
-- See [setup_new_part_prompt.md](setup_new_part_prompt.md) for details
 
 ---
 
-## 🎓 Next Steps
-
-Now that your environment is set up:
-
-1. **Read the [Main README](README.md)** for course overview
-2. **Start with [Part 1](part1/README.md)**
-3. **Run tasks:** `python task_name.py`
-4. **Check progress:** `python grade_part1.py`
-5. **Track scores:** Open `.progress/marksheet.md`
-
----
 
 ## 💡 Tips
 
@@ -633,10 +545,7 @@ Now that your environment is set up:
 
 ## 🆘 Still Having Issues?
 
-- Check [GitHub Issues](https://github.com/YOUR_USERNAME/pythonpro26/issues)
 - Ask your instructor
-- Or try [GitHub Codespaces](.devcontainer/README.md) - zero setup required!
-
 ---
 
 **Happy Coding! 🎉**

@@ -1,5 +1,0 @@
-python
-java
-c++
-typescript
-basic
